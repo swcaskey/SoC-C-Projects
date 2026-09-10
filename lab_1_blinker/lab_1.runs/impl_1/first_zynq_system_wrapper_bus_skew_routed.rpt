@@ -1,0 +1,15 @@
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1 (lin64) Build 3247384 Thu Jun 10 19:36:07 MDT 2021
+| Date         : Wed Sep  9 19:32:20 2026
+| Host         : ece13 running 64-bit Ubuntu 20.04.2 LTS
+| Command      : report_bus_skew -warn_on_violation -file first_zynq_system_wrapper_bus_skew_routed.rpt -pb first_zynq_system_wrapper_bus_skew_routed.pb -rpx first_zynq_system_wrapper_bus_skew_routed.rpx
+| Design       : first_zynq_system_wrapper
+| Device       : 7z010-clg400
+| Speed File   : -1  PRODUCTION 1.12 2019-11-22
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Bus Skew Report
+
+No bus skew constraints
+
