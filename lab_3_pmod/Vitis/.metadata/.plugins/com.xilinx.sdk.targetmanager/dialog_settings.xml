@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="zynq_keypad_system-bitFile" value="${project_loc:zynq_keypad}/_ide/bitstream/zynq_keypad_system_wrapper.bit"/>
+	<item key="zynq_keypad_system-bmmFile" value=""/>
+	<item key="zynq_keypad_system-target" value="Local"/>
+	<item key="zynq_keypad_system-device" value="Auto Detect"/>
+	<item key="zynq_keypad_system-partial_bit" value="false"/>
+	<item key="zynq_keypad_system-skip_rev_check" value="false"/>
+	<item key="programfpga.sdxproject" value="zynq_keypad_system"/>
+	<item key="devices_info_Local" value="{&quot;cables&quot;:[{&quot;name&quot;:&quot;Digilent Zybo 210279A42C4EA&quot;,&quot;indexContextMap&quot;:{&quot;2&quot;:&quot;jsn-Zybo-210279A42C4EA-4ba00477-0&quot;,&quot;3&quot;:&quot;jsn-Zybo-210279A42C4EA-13722093-0&quot;}}]}"/>
+</section>
