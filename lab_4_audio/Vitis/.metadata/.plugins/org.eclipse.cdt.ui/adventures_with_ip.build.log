@@ -1,0 +1,42 @@
+21:08:37 **** Build of configuration Debug for project adventures_with_ip ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+ 
+make --no-print-directory main-build
+Building file: ../src/adventures_with_ip.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/adventures_with_ip.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I/home/user/Desktop/lab_4/Vitis/ip_design_wrapper/export/ip_design_wrapper/sw/ip_design_wrapper/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/adventures_with_ip.d" -MT"src/adventures_with_ip.o" -o "src/adventures_with_ip.o" "../src/adventures_with_ip.c"
+../src/adventures_with_ip.c: In function 'menu':
+../src/adventures_with_ip.c:76:2: warning: this 'while' clause does not guard... [-Wmisleading-indentation]
+   76 |  while (!XUartPs_IsReceiveData(UART_BASEADDR));
+      |  ^~~~~
+../src/adventures_with_ip.c:77:5: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'while'
+   77 |     inp = XUartPs_ReadReg(UART_BASEADDR, XUARTPS_FIFO_OFFSET);
+      |     ^~~
+Finished building: ../src/adventures_with_ip.c
+ 
+Building file: ../src/audio.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/audio.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I/home/user/Desktop/lab_4/Vitis/ip_design_wrapper/export/ip_design_wrapper/sw/ip_design_wrapper/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/audio.d" -MT"src/audio.o" -o "src/audio.o" "../src/audio.c"
+Finished building: ../src/audio.c
+ 
+Building file: ../src/ip_functions.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ip_functions.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I/home/user/Desktop/lab_4/Vitis/ip_design_wrapper/export/ip_design_wrapper/sw/ip_design_wrapper/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/ip_functions.d" -MT"src/ip_functions.o" -o "src/ip_functions.o" "../src/ip_functions.c"
+Finished building: ../src/ip_functions.c
+ 
+Building target: adventures_with_ip.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L/home/user/Desktop/lab_4/Vitis/ip_design_wrapper/export/ip_design_wrapper/sw/ip_design_wrapper/standalone_ps7_cortexa9_0/bsplib/lib -o "adventures_with_ip.elf"  ./src/adventures_with_ip.o ./src/audio.o ./src/ip_functions.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: adventures_with_ip.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size adventures_with_ip.elf  |tee "adventures_with_ip.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  33076	   1200	  22680	  56956	   de7c	adventures_with_ip.elf
+Finished building: adventures_with_ip.elf.size
+ 
+
+21:08:38 Build Finished (took 1s.163ms)
+

@@ -1,0 +1,37 @@
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
+|       Launch Clock       |      Capture Clock       |                                                 Pin                                                      |
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
+|               clk_fpga_0 |               clk_fpga_0 |                                 ip_design_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/weight_reg[1][15]/D|
+|               clk_fpga_0 |               clk_fpga_0 |                                 ip_design_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/weight_reg[1][12]/D|
+|               clk_fpga_0 |               clk_fpga_0 |                                 ip_design_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/weight_reg[1][11]/D|
+|               clk_fpga_0 |               clk_fpga_0 |                                 ip_design_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/weight_reg[3][15]/D|
+|               clk_fpga_0 |               clk_fpga_0 |                                  ip_design_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/weight_reg[1][8]/D|
+|               clk_fpga_0 |               clk_fpga_0 |                                  ip_design_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/weight_reg[1][7]/D|
+|               clk_fpga_0 |               clk_fpga_0 |                                 ip_design_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/weight_reg[3][11]/D|
+|               clk_fpga_0 |               clk_fpga_0 |                                  ip_design_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/weight_reg[1][4]/D|
+|               clk_fpga_0 |               clk_fpga_0 |                                ip_design_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/weight_reg[14][15]/D|
+|               clk_fpga_0 |               clk_fpga_0 |                                  ip_design_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/weight_reg[3][8]/D|
+|               clk_fpga_0 |               clk_fpga_0 |                                  ip_design_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/weight_reg[3][7]/D|
+|               clk_fpga_0 |               clk_fpga_0 |                                ip_design_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/weight_reg[14][12]/D|
+|               clk_fpga_0 |               clk_fpga_0 |                                ip_design_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/weight_reg[14][11]/D|
+|               clk_fpga_0 |               clk_fpga_0 |                                  ip_design_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/weight_reg[1][3]/D|
+|               clk_fpga_0 |               clk_fpga_0 |                                 ip_design_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/weight_reg[0][15]/D|
+|               clk_fpga_0 |               clk_fpga_0 |                                  ip_design_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/weight_reg[3][4]/D|
+|               clk_fpga_0 |               clk_fpga_0 |                                 ip_design_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/weight_reg[14][8]/D|
+|               clk_fpga_0 |               clk_fpga_0 |                                ip_design_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/weight_reg[10][15]/D|
+|               clk_fpga_0 |               clk_fpga_0 |                                 ip_design_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/weight_reg[14][7]/D|
+|               clk_fpga_0 |               clk_fpga_0 |                                ip_design_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/weight_reg[10][12]/D|
+|               clk_fpga_0 |               clk_fpga_0 |                                 ip_design_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/weight_reg[14][4]/D|
+|               clk_fpga_0 |               clk_fpga_0 |                                ip_design_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/weight_reg[10][11]/D|
+|               clk_fpga_0 |               clk_fpga_0 |                         ip_design_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/weight_reg[15][8]_replica/D|
+|               clk_fpga_0 |               clk_fpga_0 |                                 ip_design_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/weight_reg[10][8]/D|
+|               clk_fpga_0 |               clk_fpga_0 |                                 ip_design_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/weight_reg[14][3]/D|
+|               clk_fpga_0 |               clk_fpga_0 |                                 ip_design_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/weight_reg[10][7]/D|
+|               clk_fpga_0 |               clk_fpga_0 |                                  ip_design_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/weight_reg[1][0]/D|
+|               clk_fpga_0 |               clk_fpga_0 |                                  ip_design_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/weight_reg[0][4]/D|
+|               clk_fpga_0 |               clk_fpga_0 |                                 ip_design_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/weight_reg[10][4]/D|
+|               clk_fpga_0 |               clk_fpga_0 |                                  ip_design_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/weight_reg[3][0]/D|
+|               clk_fpga_0 |               clk_fpga_0 |                                 ip_design_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/weight_reg[10][3]/D|
+|               clk_fpga_0 |               clk_fpga_0 |                                 ip_design_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/weight_reg[14][0]/D|
+|               clk_fpga_0 |               clk_fpga_0 |                                 ip_design_i/lms_pcore_0/U0/u_lms_pcore_dut_inst/u_LMS/weight_reg[10][0]/D|
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+

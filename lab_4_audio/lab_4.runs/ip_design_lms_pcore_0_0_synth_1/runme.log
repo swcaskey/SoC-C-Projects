@@ -1,0 +1,512 @@
+
+*** Running vivado
+    with args -log ip_design_lms_pcore_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source ip_design_lms_pcore_0_0.tcl
+
+
+****** Vivado v2021.1 (64-bit)
+  **** SW Build 3247384 on Thu Jun 10 19:36:07 MDT 2021
+  **** IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+source ip_design_lms_pcore_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/software/digilent'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/user/Downloads/sources/zybo/adventures_with_ip_integrator/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/software/Xilinx/Vivado/2021.1/data/ip'.
+Command: synth_design -top ip_design_lms_pcore_0_0 -part xc7z010clg400-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 75215
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2468.262 ; gain = 0.000 ; free physical = 568 ; free virtual = 18387
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'ip_design_lms_pcore_0_0' [/home/user/Desktop/lab_4/lab_4.gen/sources_1/bd/ip_design/ip/ip_design_lms_pcore_0_0/synth/ip_design_lms_pcore_0_0.vhd:85]
+INFO: [Synth 8-3491] module 'lms_pcore' declared at '/home/user/Desktop/lab_4/lab_4.gen/sources_1/bd/ip_design/ipshared/b469/hdl/vhdl/lms_pcore.vhd:29' bound to instance 'U0' of component 'lms_pcore' [/home/user/Desktop/lab_4/lab_4.gen/sources_1/bd/ip_design/ip/ip_design_lms_pcore_0_0/synth/ip_design_lms_pcore_0_0.vhd:147]
+INFO: [Synth 8-638] synthesizing module 'lms_pcore' [/home/user/Desktop/lab_4/lab_4.gen/sources_1/bd/ip_design/ipshared/b469/hdl/vhdl/lms_pcore.vhd:55]
+INFO: [Synth 8-3491] module 'lms_pcore_dut' declared at '/home/user/Desktop/lab_4/lab_4.gen/sources_1/bd/ip_design/ipshared/b469/hdl/vhdl/lms_pcore_dut.vhd:22' bound to instance 'u_lms_pcore_dut_inst' of component 'lms_pcore_dut' [/home/user/Desktop/lab_4/lab_4.gen/sources_1/bd/ip_design/ipshared/b469/hdl/vhdl/lms_pcore.vhd:140]
+INFO: [Synth 8-638] synthesizing module 'lms_pcore_dut' [/home/user/Desktop/lab_4/lab_4.gen/sources_1/bd/ip_design/ipshared/b469/hdl/vhdl/lms_pcore_dut.vhd:34]
+INFO: [Synth 8-3491] module 'LMS' declared at '/home/user/Desktop/lab_4/lab_4.gen/sources_1/bd/ip_design/ipshared/b469/hdl/vhdl/LMS.vhd:42' bound to instance 'u_LMS' of component 'LMS' [/home/user/Desktop/lab_4/lab_4.gen/sources_1/bd/ip_design/ipshared/b469/hdl/vhdl/lms_pcore_dut.vhd:58]
+INFO: [Synth 8-638] synthesizing module 'LMS' [/home/user/Desktop/lab_4/lab_4.gen/sources_1/bd/ip_design/ipshared/b469/hdl/vhdl/LMS.vhd:54]
+INFO: [Synth 8-256] done synthesizing module 'LMS' (1#1) [/home/user/Desktop/lab_4/lab_4.gen/sources_1/bd/ip_design/ipshared/b469/hdl/vhdl/LMS.vhd:54]
+INFO: [Synth 8-256] done synthesizing module 'lms_pcore_dut' (2#1) [/home/user/Desktop/lab_4/lab_4.gen/sources_1/bd/ip_design/ipshared/b469/hdl/vhdl/lms_pcore_dut.vhd:34]
+INFO: [Synth 8-3491] module 'lms_pcore_cop' declared at '/home/user/Desktop/lab_4/lab_4.gen/sources_1/bd/ip_design/ipshared/b469/hdl/vhdl/lms_pcore_cop.vhd:22' bound to instance 'u_lms_pcore_cop_inst' of component 'lms_pcore_cop' [/home/user/Desktop/lab_4/lab_4.gen/sources_1/bd/ip_design/ipshared/b469/hdl/vhdl/lms_pcore.vhd:150]
+INFO: [Synth 8-638] synthesizing module 'lms_pcore_cop' [/home/user/Desktop/lab_4/lab_4.gen/sources_1/bd/ip_design/ipshared/b469/hdl/vhdl/lms_pcore_cop.vhd:34]
+INFO: [Synth 8-256] done synthesizing module 'lms_pcore_cop' (3#1) [/home/user/Desktop/lab_4/lab_4.gen/sources_1/bd/ip_design/ipshared/b469/hdl/vhdl/lms_pcore_cop.vhd:34]
+INFO: [Synth 8-3491] module 'lms_pcore_axi_lite' declared at '/home/user/Desktop/lab_4/lab_4.gen/sources_1/bd/ip_design/ipshared/b469/hdl/vhdl/lms_pcore_axi_lite.vhd:22' bound to instance 'u_lms_pcore_axi_lite_inst' of component 'lms_pcore_axi_lite' [/home/user/Desktop/lab_4/lab_4.gen/sources_1/bd/ip_design/ipshared/b469/hdl/vhdl/lms_pcore.vhd:160]
+INFO: [Synth 8-638] synthesizing module 'lms_pcore_axi_lite' [/home/user/Desktop/lab_4/lab_4.gen/sources_1/bd/ip_design/ipshared/b469/hdl/vhdl/lms_pcore_axi_lite.vhd:55]
+INFO: [Synth 8-3491] module 'lms_pcore_addr_decoder' declared at '/home/user/Desktop/lab_4/lab_4.gen/sources_1/bd/ip_design/ipshared/b469/hdl/vhdl/lms_pcore_addr_decoder.vhd:22' bound to instance 'u_lms_pcore_addr_decoder_inst' of component 'lms_pcore_addr_decoder' [/home/user/Desktop/lab_4/lab_4.gen/sources_1/bd/ip_design/ipshared/b469/hdl/vhdl/lms_pcore_axi_lite.vhd:126]
+INFO: [Synth 8-638] synthesizing module 'lms_pcore_addr_decoder' [/home/user/Desktop/lab_4/lab_4.gen/sources_1/bd/ip_design/ipshared/b469/hdl/vhdl/lms_pcore_addr_decoder.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'lms_pcore_addr_decoder' (4#1) [/home/user/Desktop/lab_4/lab_4.gen/sources_1/bd/ip_design/ipshared/b469/hdl/vhdl/lms_pcore_addr_decoder.vhd:41]
+INFO: [Synth 8-3491] module 'lms_pcore_axi_lite_module' declared at '/home/user/Desktop/lab_4/lab_4.gen/sources_1/bd/ip_design/ipshared/b469/hdl/vhdl/lms_pcore_axi_lite_module.vhd:22' bound to instance 'u_lms_pcore_axi_lite_module_inst' of component 'lms_pcore_axi_lite_module' [/home/user/Desktop/lab_4/lab_4.gen/sources_1/bd/ip_design/ipshared/b469/hdl/vhdl/lms_pcore_axi_lite.vhd:143]
+INFO: [Synth 8-638] synthesizing module 'lms_pcore_axi_lite_module' [/home/user/Desktop/lab_4/lab_4.gen/sources_1/bd/ip_design/ipshared/b469/hdl/vhdl/lms_pcore_axi_lite_module.vhd:52]
+INFO: [Synth 8-256] done synthesizing module 'lms_pcore_axi_lite_module' (5#1) [/home/user/Desktop/lab_4/lab_4.gen/sources_1/bd/ip_design/ipshared/b469/hdl/vhdl/lms_pcore_axi_lite_module.vhd:52]
+INFO: [Synth 8-256] done synthesizing module 'lms_pcore_axi_lite' (6#1) [/home/user/Desktop/lab_4/lab_4.gen/sources_1/bd/ip_design/ipshared/b469/hdl/vhdl/lms_pcore_axi_lite.vhd:55]
+INFO: [Synth 8-256] done synthesizing module 'lms_pcore' (7#1) [/home/user/Desktop/lab_4/lab_4.gen/sources_1/bd/ip_design/ipshared/b469/hdl/vhdl/lms_pcore.vhd:55]
+INFO: [Synth 8-256] done synthesizing module 'ip_design_lms_pcore_0_0' (8#1) [/home/user/Desktop/lab_4/lab_4.gen/sources_1/bd/ip_design/ip/ip_design_lms_pcore_0_0/synth/ip_design_lms_pcore_0_0.vhd:85]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2468.262 ; gain = 0.000 ; free physical = 1551 ; free virtual = 17863
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 2468.262 ; gain = 0.000 ; free physical = 3242 ; free virtual = 19554
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 2468.262 ; gain = 0.000 ; free physical = 3241 ; free virtual = 19553
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2468.262 ; gain = 0.000 ; free physical = 3119 ; free virtual = 19432
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2532.160 ; gain = 0.000 ; free physical = 2975 ; free virtual = 19293
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2532.160 ; gain = 0.000 ; free physical = 2965 ; free virtual = 19283
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2532.160 ; gain = 63.898 ; free physical = 3155 ; free virtual = 19480
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2532.160 ; gain = 63.898 ; free physical = 3154 ; free virtual = 19479
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2532.160 ; gain = 63.898 ; free physical = 3156 ; free virtual = 19481
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'cp_controller_cpstate_reg' in module 'lms_pcore_cop'
+INFO: [Synth 8-802] inferred FSM for state register 'axi_lite_wstate_reg' in module 'lms_pcore_axi_lite_module'
+INFO: [Synth 8-802] inferred FSM for state register 'axi_lite_rstate_reg' in module 'lms_pcore_axi_lite_module'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                              001 |                         00000000
+                 iSTATE0 |                              010 |                         00000001
+                 iSTATE1 |                              100 |                         00000010
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'cp_controller_cpstate_reg' using encoding 'one-hot' in module 'lms_pcore_cop'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE1 |                              001 |                         00000000
+                  iSTATE |                              010 |                         00000001
+                 iSTATE0 |                              100 |                         00000010
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'axi_lite_wstate_reg' using encoding 'one-hot' in module 'lms_pcore_axi_lite_module'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                                0 |                         00000000
+                 iSTATE0 |                                1 |                         00000001
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'axi_lite_rstate_reg' using encoding 'sequential' in module 'lms_pcore_axi_lite_module'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 2532.160 ; gain = 63.898 ; free physical = 3103 ; free virtual = 19430
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	  16 Input   16 Bit       Adders := 1     
+	   3 Input   16 Bit       Adders := 1     
+	   2 Input    1 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 2     
+	               16 Bit    Registers := 19    
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 1     
+	   2 Input   14 Bit        Muxes := 1     
+	   3 Input    3 Bit        Muxes := 2     
+	   2 Input    3 Bit        Muxes := 5     
+	   3 Input    1 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 10    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+DSP Report: Generating DSP U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_18, operation Mode is: A*B.
+DSP Report: operator U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_18 is absorbed into DSP U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_18.
+DSP Report: Generating DSP U0/u_lms_pcore_dut_inst/u_LMS/ARG, operation Mode is: C+A*B.
+DSP Report: operator U0/u_lms_pcore_dut_inst/u_LMS/ARG is absorbed into DSP U0/u_lms_pcore_dut_inst/u_LMS/ARG.
+DSP Report: operator U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_18 is absorbed into DSP U0/u_lms_pcore_dut_inst/u_LMS/ARG.
+DSP Report: Generating DSP U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_1, operation Mode is: A*B.
+DSP Report: operator U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_1 is absorbed into DSP U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_1.
+DSP Report: Generating DSP U0/u_lms_pcore_dut_inst/u_LMS/ARG, operation Mode is: C+A*B.
+DSP Report: operator U0/u_lms_pcore_dut_inst/u_LMS/ARG is absorbed into DSP U0/u_lms_pcore_dut_inst/u_LMS/ARG.
+DSP Report: operator U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_1 is absorbed into DSP U0/u_lms_pcore_dut_inst/u_LMS/ARG.
+DSP Report: Generating DSP U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_19, operation Mode is: A*B.
+DSP Report: operator U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_19 is absorbed into DSP U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_19.
+DSP Report: Generating DSP U0/u_lms_pcore_dut_inst/u_LMS/ARG, operation Mode is: C+A*B.
+DSP Report: operator U0/u_lms_pcore_dut_inst/u_LMS/ARG is absorbed into DSP U0/u_lms_pcore_dut_inst/u_LMS/ARG.
+DSP Report: operator U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_19 is absorbed into DSP U0/u_lms_pcore_dut_inst/u_LMS/ARG.
+DSP Report: Generating DSP U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_2, operation Mode is: A*B.
+DSP Report: operator U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_2 is absorbed into DSP U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_2.
+DSP Report: Generating DSP U0/u_lms_pcore_dut_inst/u_LMS/ARG, operation Mode is: C+A*B.
+DSP Report: operator U0/u_lms_pcore_dut_inst/u_LMS/ARG is absorbed into DSP U0/u_lms_pcore_dut_inst/u_LMS/ARG.
+DSP Report: operator U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_2 is absorbed into DSP U0/u_lms_pcore_dut_inst/u_LMS/ARG.
+DSP Report: Generating DSP U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_20, operation Mode is: A*B.
+DSP Report: operator U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_20 is absorbed into DSP U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_20.
+DSP Report: Generating DSP U0/u_lms_pcore_dut_inst/u_LMS/ARG, operation Mode is: C+A*B.
+DSP Report: operator U0/u_lms_pcore_dut_inst/u_LMS/ARG is absorbed into DSP U0/u_lms_pcore_dut_inst/u_LMS/ARG.
+DSP Report: operator U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_20 is absorbed into DSP U0/u_lms_pcore_dut_inst/u_LMS/ARG.
+DSP Report: Generating DSP U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_3, operation Mode is: A*B.
+DSP Report: operator U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_3 is absorbed into DSP U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_3.
+DSP Report: Generating DSP U0/u_lms_pcore_dut_inst/u_LMS/ARG, operation Mode is: C+A*B.
+DSP Report: operator U0/u_lms_pcore_dut_inst/u_LMS/ARG is absorbed into DSP U0/u_lms_pcore_dut_inst/u_LMS/ARG.
+DSP Report: operator U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_3 is absorbed into DSP U0/u_lms_pcore_dut_inst/u_LMS/ARG.
+DSP Report: Generating DSP U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_21, operation Mode is: A*B.
+DSP Report: operator U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_21 is absorbed into DSP U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_21.
+DSP Report: Generating DSP U0/u_lms_pcore_dut_inst/u_LMS/ARG, operation Mode is: C+A*B.
+DSP Report: operator U0/u_lms_pcore_dut_inst/u_LMS/ARG is absorbed into DSP U0/u_lms_pcore_dut_inst/u_LMS/ARG.
+DSP Report: operator U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_21 is absorbed into DSP U0/u_lms_pcore_dut_inst/u_LMS/ARG.
+DSP Report: Generating DSP U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_4, operation Mode is: A*B.
+DSP Report: operator U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_4 is absorbed into DSP U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_4.
+DSP Report: Generating DSP U0/u_lms_pcore_dut_inst/u_LMS/ARG, operation Mode is: C+A*B.
+DSP Report: operator U0/u_lms_pcore_dut_inst/u_LMS/ARG is absorbed into DSP U0/u_lms_pcore_dut_inst/u_LMS/ARG.
+DSP Report: operator U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_4 is absorbed into DSP U0/u_lms_pcore_dut_inst/u_LMS/ARG.
+DSP Report: Generating DSP U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_22, operation Mode is: A*B.
+DSP Report: operator U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_22 is absorbed into DSP U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_22.
+DSP Report: Generating DSP U0/u_lms_pcore_dut_inst/u_LMS/ARG, operation Mode is: C+A*B.
+DSP Report: operator U0/u_lms_pcore_dut_inst/u_LMS/ARG is absorbed into DSP U0/u_lms_pcore_dut_inst/u_LMS/ARG.
+DSP Report: operator U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_22 is absorbed into DSP U0/u_lms_pcore_dut_inst/u_LMS/ARG.
+DSP Report: Generating DSP U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_5, operation Mode is: A*B.
+DSP Report: operator U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_5 is absorbed into DSP U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_5.
+DSP Report: Generating DSP U0/u_lms_pcore_dut_inst/u_LMS/ARG, operation Mode is: C+A*B.
+DSP Report: operator U0/u_lms_pcore_dut_inst/u_LMS/ARG is absorbed into DSP U0/u_lms_pcore_dut_inst/u_LMS/ARG.
+DSP Report: operator U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_5 is absorbed into DSP U0/u_lms_pcore_dut_inst/u_LMS/ARG.
+DSP Report: Generating DSP U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_23, operation Mode is: A*B.
+DSP Report: operator U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_23 is absorbed into DSP U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_23.
+DSP Report: Generating DSP U0/u_lms_pcore_dut_inst/u_LMS/ARG, operation Mode is: C+A*B.
+DSP Report: operator U0/u_lms_pcore_dut_inst/u_LMS/ARG is absorbed into DSP U0/u_lms_pcore_dut_inst/u_LMS/ARG.
+DSP Report: operator U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_23 is absorbed into DSP U0/u_lms_pcore_dut_inst/u_LMS/ARG.
+DSP Report: Generating DSP U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_6, operation Mode is: A*B.
+DSP Report: operator U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_6 is absorbed into DSP U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_6.
+DSP Report: Generating DSP U0/u_lms_pcore_dut_inst/u_LMS/ARG, operation Mode is: C+A*B.
+DSP Report: operator U0/u_lms_pcore_dut_inst/u_LMS/ARG is absorbed into DSP U0/u_lms_pcore_dut_inst/u_LMS/ARG.
+DSP Report: operator U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_6 is absorbed into DSP U0/u_lms_pcore_dut_inst/u_LMS/ARG.
+DSP Report: Generating DSP U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_24, operation Mode is: A*B.
+DSP Report: operator U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_24 is absorbed into DSP U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_24.
+DSP Report: Generating DSP U0/u_lms_pcore_dut_inst/u_LMS/ARG, operation Mode is: C+A*B.
+DSP Report: operator U0/u_lms_pcore_dut_inst/u_LMS/ARG is absorbed into DSP U0/u_lms_pcore_dut_inst/u_LMS/ARG.
+DSP Report: operator U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_24 is absorbed into DSP U0/u_lms_pcore_dut_inst/u_LMS/ARG.
+DSP Report: Generating DSP U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_7, operation Mode is: A*B.
+DSP Report: operator U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_7 is absorbed into DSP U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_7.
+DSP Report: Generating DSP U0/u_lms_pcore_dut_inst/u_LMS/ARG, operation Mode is: C+A*B.
+DSP Report: operator U0/u_lms_pcore_dut_inst/u_LMS/ARG is absorbed into DSP U0/u_lms_pcore_dut_inst/u_LMS/ARG.
+DSP Report: operator U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_7 is absorbed into DSP U0/u_lms_pcore_dut_inst/u_LMS/ARG.
+DSP Report: Generating DSP U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_25, operation Mode is: A*B.
+DSP Report: operator U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_25 is absorbed into DSP U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_25.
+DSP Report: Generating DSP U0/u_lms_pcore_dut_inst/u_LMS/ARG, operation Mode is: C+A*B.
+DSP Report: operator U0/u_lms_pcore_dut_inst/u_LMS/ARG is absorbed into DSP U0/u_lms_pcore_dut_inst/u_LMS/ARG.
+DSP Report: operator U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_25 is absorbed into DSP U0/u_lms_pcore_dut_inst/u_LMS/ARG.
+DSP Report: Generating DSP U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_8, operation Mode is: A*B.
+DSP Report: operator U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_8 is absorbed into DSP U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_8.
+DSP Report: Generating DSP U0/u_lms_pcore_dut_inst/u_LMS/ARG, operation Mode is: C+A*B.
+DSP Report: operator U0/u_lms_pcore_dut_inst/u_LMS/ARG is absorbed into DSP U0/u_lms_pcore_dut_inst/u_LMS/ARG.
+DSP Report: operator U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_8 is absorbed into DSP U0/u_lms_pcore_dut_inst/u_LMS/ARG.
+DSP Report: Generating DSP U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_26, operation Mode is: A*B.
+DSP Report: operator U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_26 is absorbed into DSP U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_26.
+DSP Report: Generating DSP U0/u_lms_pcore_dut_inst/u_LMS/ARG, operation Mode is: C+A*B.
+DSP Report: operator U0/u_lms_pcore_dut_inst/u_LMS/ARG is absorbed into DSP U0/u_lms_pcore_dut_inst/u_LMS/ARG.
+DSP Report: operator U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_26 is absorbed into DSP U0/u_lms_pcore_dut_inst/u_LMS/ARG.
+DSP Report: Generating DSP U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_9, operation Mode is: A*B.
+DSP Report: operator U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_9 is absorbed into DSP U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_9.
+DSP Report: Generating DSP U0/u_lms_pcore_dut_inst/u_LMS/ARG, operation Mode is: C+A*B.
+DSP Report: operator U0/u_lms_pcore_dut_inst/u_LMS/ARG is absorbed into DSP U0/u_lms_pcore_dut_inst/u_LMS/ARG.
+DSP Report: operator U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_9 is absorbed into DSP U0/u_lms_pcore_dut_inst/u_LMS/ARG.
+DSP Report: Generating DSP U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_27, operation Mode is: A*B.
+DSP Report: operator U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_27 is absorbed into DSP U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_27.
+DSP Report: Generating DSP U0/u_lms_pcore_dut_inst/u_LMS/ARG, operation Mode is: C+A*B.
+DSP Report: operator U0/u_lms_pcore_dut_inst/u_LMS/ARG is absorbed into DSP U0/u_lms_pcore_dut_inst/u_LMS/ARG.
+DSP Report: operator U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_27 is absorbed into DSP U0/u_lms_pcore_dut_inst/u_LMS/ARG.
+DSP Report: Generating DSP U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_10, operation Mode is: A*B.
+DSP Report: operator U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_10 is absorbed into DSP U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_10.
+DSP Report: Generating DSP U0/u_lms_pcore_dut_inst/u_LMS/ARG, operation Mode is: C+A*B.
+DSP Report: operator U0/u_lms_pcore_dut_inst/u_LMS/ARG is absorbed into DSP U0/u_lms_pcore_dut_inst/u_LMS/ARG.
+DSP Report: operator U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_10 is absorbed into DSP U0/u_lms_pcore_dut_inst/u_LMS/ARG.
+DSP Report: Generating DSP U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_28, operation Mode is: A*B.
+DSP Report: operator U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_28 is absorbed into DSP U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_28.
+DSP Report: Generating DSP U0/u_lms_pcore_dut_inst/u_LMS/ARG, operation Mode is: C+A*B.
+DSP Report: operator U0/u_lms_pcore_dut_inst/u_LMS/ARG is absorbed into DSP U0/u_lms_pcore_dut_inst/u_LMS/ARG.
+DSP Report: operator U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_28 is absorbed into DSP U0/u_lms_pcore_dut_inst/u_LMS/ARG.
+DSP Report: Generating DSP U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_11, operation Mode is: A*B.
+DSP Report: operator U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_11 is absorbed into DSP U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_11.
+DSP Report: Generating DSP U0/u_lms_pcore_dut_inst/u_LMS/ARG, operation Mode is: C+A*B.
+DSP Report: operator U0/u_lms_pcore_dut_inst/u_LMS/ARG is absorbed into DSP U0/u_lms_pcore_dut_inst/u_LMS/ARG.
+DSP Report: operator U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_11 is absorbed into DSP U0/u_lms_pcore_dut_inst/u_LMS/ARG.
+DSP Report: Generating DSP U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_29, operation Mode is: A*B.
+DSP Report: operator U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_29 is absorbed into DSP U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_29.
+DSP Report: Generating DSP U0/u_lms_pcore_dut_inst/u_LMS/ARG, operation Mode is: C+A*B.
+DSP Report: operator U0/u_lms_pcore_dut_inst/u_LMS/ARG is absorbed into DSP U0/u_lms_pcore_dut_inst/u_LMS/ARG.
+DSP Report: operator U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_29 is absorbed into DSP U0/u_lms_pcore_dut_inst/u_LMS/ARG.
+DSP Report: Generating DSP U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_12, operation Mode is: A*B.
+DSP Report: operator U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_12 is absorbed into DSP U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_12.
+DSP Report: Generating DSP U0/u_lms_pcore_dut_inst/u_LMS/ARG, operation Mode is: C+A*B.
+DSP Report: operator U0/u_lms_pcore_dut_inst/u_LMS/ARG is absorbed into DSP U0/u_lms_pcore_dut_inst/u_LMS/ARG.
+DSP Report: operator U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_12 is absorbed into DSP U0/u_lms_pcore_dut_inst/u_LMS/ARG.
+DSP Report: Generating DSP U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_30, operation Mode is: A*B.
+DSP Report: operator U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_30 is absorbed into DSP U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_30.
+DSP Report: Generating DSP U0/u_lms_pcore_dut_inst/u_LMS/ARG, operation Mode is: C+A*B.
+DSP Report: operator U0/u_lms_pcore_dut_inst/u_LMS/ARG is absorbed into DSP U0/u_lms_pcore_dut_inst/u_LMS/ARG.
+DSP Report: operator U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_30 is absorbed into DSP U0/u_lms_pcore_dut_inst/u_LMS/ARG.
+DSP Report: Generating DSP U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_13, operation Mode is: A*B.
+DSP Report: operator U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_13 is absorbed into DSP U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_13.
+DSP Report: Generating DSP U0/u_lms_pcore_dut_inst/u_LMS/ARG, operation Mode is: C+A*B.
+DSP Report: operator U0/u_lms_pcore_dut_inst/u_LMS/ARG is absorbed into DSP U0/u_lms_pcore_dut_inst/u_LMS/ARG.
+DSP Report: operator U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_13 is absorbed into DSP U0/u_lms_pcore_dut_inst/u_LMS/ARG.
+DSP Report: Generating DSP U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_31, operation Mode is: A*B.
+DSP Report: operator U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_31 is absorbed into DSP U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_31.
+DSP Report: Generating DSP U0/u_lms_pcore_dut_inst/u_LMS/ARG, operation Mode is: C+A*B.
+DSP Report: operator U0/u_lms_pcore_dut_inst/u_LMS/ARG is absorbed into DSP U0/u_lms_pcore_dut_inst/u_LMS/ARG.
+DSP Report: operator U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_31 is absorbed into DSP U0/u_lms_pcore_dut_inst/u_LMS/ARG.
+DSP Report: Generating DSP U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_14, operation Mode is: A*B.
+DSP Report: operator U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_14 is absorbed into DSP U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_14.
+DSP Report: Generating DSP U0/u_lms_pcore_dut_inst/u_LMS/ARG, operation Mode is: C+A*B.
+DSP Report: operator U0/u_lms_pcore_dut_inst/u_LMS/ARG is absorbed into DSP U0/u_lms_pcore_dut_inst/u_LMS/ARG.
+DSP Report: operator U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_14 is absorbed into DSP U0/u_lms_pcore_dut_inst/u_LMS/ARG.
+DSP Report: Generating DSP U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_32, operation Mode is: A*B.
+DSP Report: operator U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_32 is absorbed into DSP U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_32.
+DSP Report: Generating DSP U0/u_lms_pcore_dut_inst/u_LMS/ARG, operation Mode is: C+A*B.
+DSP Report: operator U0/u_lms_pcore_dut_inst/u_LMS/ARG is absorbed into DSP U0/u_lms_pcore_dut_inst/u_LMS/ARG.
+DSP Report: operator U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_32 is absorbed into DSP U0/u_lms_pcore_dut_inst/u_LMS/ARG.
+DSP Report: Generating DSP U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_15, operation Mode is: A*B.
+DSP Report: operator U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_15 is absorbed into DSP U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_15.
+DSP Report: Generating DSP U0/u_lms_pcore_dut_inst/u_LMS/ARG, operation Mode is: C+A*B.
+DSP Report: operator U0/u_lms_pcore_dut_inst/u_LMS/ARG is absorbed into DSP U0/u_lms_pcore_dut_inst/u_LMS/ARG.
+DSP Report: operator U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_15 is absorbed into DSP U0/u_lms_pcore_dut_inst/u_LMS/ARG.
+DSP Report: Generating DSP U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_17, operation Mode is: A*B.
+DSP Report: operator U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_17 is absorbed into DSP U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_17.
+DSP Report: Generating DSP U0/u_lms_pcore_dut_inst/u_LMS/ARG, operation Mode is: C+A*B.
+DSP Report: operator U0/u_lms_pcore_dut_inst/u_LMS/ARG is absorbed into DSP U0/u_lms_pcore_dut_inst/u_LMS/ARG.
+DSP Report: operator U0/u_lms_pcore_dut_inst/u_LMS/mul_temp_17 is absorbed into DSP U0/u_lms_pcore_dut_inst/u_LMS/ARG.
+DSP Report: Generating DSP U0/u_lms_pcore_dut_inst/u_LMS/mul_temp, operation Mode is: A*B.
+DSP Report: operator U0/u_lms_pcore_dut_inst/u_LMS/mul_temp is absorbed into DSP U0/u_lms_pcore_dut_inst/u_LMS/mul_temp.
+DSP Report: Generating DSP U0/u_lms_pcore_dut_inst/u_LMS/ARG, operation Mode is: C+A*B.
+DSP Report: operator U0/u_lms_pcore_dut_inst/u_LMS/ARG is absorbed into DSP U0/u_lms_pcore_dut_inst/u_LMS/ARG.
+DSP Report: operator U0/u_lms_pcore_dut_inst/u_LMS/mul_temp is absorbed into DSP U0/u_lms_pcore_dut_inst/u_LMS/ARG.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 2532.160 ; gain = 63.898 ; free physical = 3062 ; free virtual = 19393
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping Report (see note below)
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|LMS         | A*B         | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|LMS         | C+A*B       | 16     | 16     | 15     | -      | 30     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|LMS         | A*B         | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|LMS         | C+A*B       | 16     | 16     | 15     | -      | 30     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|LMS         | A*B         | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|LMS         | C+A*B       | 16     | 16     | 15     | -      | 30     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|LMS         | A*B         | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|LMS         | C+A*B       | 16     | 16     | 15     | -      | 30     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|LMS         | A*B         | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|LMS         | C+A*B       | 16     | 16     | 15     | -      | 30     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|LMS         | A*B         | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|LMS         | C+A*B       | 16     | 16     | 15     | -      | 30     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|LMS         | A*B         | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|LMS         | C+A*B       | 16     | 16     | 15     | -      | 30     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|LMS         | A*B         | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|LMS         | C+A*B       | 16     | 16     | 15     | -      | 30     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|LMS         | A*B         | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|LMS         | C+A*B       | 16     | 16     | 15     | -      | 30     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|LMS         | A*B         | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|LMS         | C+A*B       | 16     | 16     | 15     | -      | 30     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|LMS         | A*B         | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|LMS         | C+A*B       | 16     | 16     | 15     | -      | 30     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|LMS         | A*B         | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|LMS         | C+A*B       | 16     | 16     | 15     | -      | 30     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|LMS         | A*B         | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|LMS         | C+A*B       | 16     | 16     | 15     | -      | 30     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|LMS         | A*B         | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|LMS         | C+A*B       | 16     | 16     | 15     | -      | 30     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|LMS         | A*B         | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|LMS         | C+A*B       | 16     | 16     | 15     | -      | 30     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|LMS         | A*B         | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|LMS         | C+A*B       | 16     | 16     | 15     | -      | 30     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|LMS         | A*B         | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|LMS         | C+A*B       | 16     | 16     | 15     | -      | 30     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|LMS         | A*B         | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|LMS         | C+A*B       | 16     | 16     | 15     | -      | 30     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|LMS         | A*B         | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|LMS         | C+A*B       | 16     | 16     | 15     | -      | 30     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|LMS         | A*B         | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|LMS         | C+A*B       | 16     | 16     | 15     | -      | 30     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|LMS         | A*B         | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|LMS         | C+A*B       | 16     | 16     | 15     | -      | 30     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|LMS         | A*B         | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|LMS         | C+A*B       | 16     | 16     | 15     | -      | 30     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|LMS         | A*B         | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|LMS         | C+A*B       | 16     | 16     | 15     | -      | 30     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|LMS         | A*B         | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|LMS         | C+A*B       | 16     | 16     | 15     | -      | 30     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|LMS         | A*B         | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|LMS         | C+A*B       | 16     | 16     | 15     | -      | 30     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|LMS         | A*B         | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|LMS         | C+A*B       | 16     | 16     | 15     | -      | 30     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|LMS         | A*B         | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|LMS         | C+A*B       | 16     | 16     | 15     | -      | 30     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|LMS         | A*B         | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|LMS         | C+A*B       | 16     | 16     | 15     | -      | 30     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|LMS         | A*B         | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|LMS         | C+A*B       | 16     | 16     | 15     | -      | 30     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|LMS         | A*B         | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|LMS         | C+A*B       | 16     | 16     | 15     | -      | 30     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|LMS         | A*B         | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|LMS         | C+A*B       | 16     | 16     | 15     | -      | 30     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|LMS         | A*B         | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|LMS         | C+A*B       | 16     | 16     | 15     | -      | 30     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 2532.160 ; gain = 63.898 ; free physical = 2569 ; free virtual = 18910
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 2532.160 ; gain = 63.898 ; free physical = 2559 ; free virtual = 18899
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 2532.160 ; gain = 63.898 ; free physical = 2785 ; free virtual = 19128
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 2532.160 ; gain = 63.898 ; free physical = 2944 ; free virtual = 19293
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 2532.160 ; gain = 63.898 ; free physical = 2944 ; free virtual = 19293
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 2532.160 ; gain = 63.898 ; free physical = 2944 ; free virtual = 19293
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 2532.160 ; gain = 63.898 ; free physical = 2944 ; free virtual = 19293
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 2532.160 ; gain = 63.898 ; free physical = 2944 ; free virtual = 19293
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 2532.160 ; gain = 63.898 ; free physical = 2944 ; free virtual = 19293
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |CARRY4  |   101|
+|2     |DSP48E1 |    64|
+|4     |LUT1    |    38|
+|5     |LUT2    |   288|
+|6     |LUT3    |   114|
+|7     |LUT4    |    95|
+|8     |LUT5    |    34|
+|9     |LUT6    |    31|
+|10    |FDCE    |   695|
+|11    |FDPE    |     3|
++------+--------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 2532.160 ; gain = 63.898 ; free physical = 2944 ; free virtual = 19293
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 2532.160 ; gain = 0.000 ; free physical = 3017 ; free virtual = 19366
+Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 2532.160 ; gain = 63.898 ; free physical = 3017 ; free virtual = 19366
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2532.160 ; gain = 0.000 ; free physical = 3104 ; free virtual = 19453
+INFO: [Netlist 29-17] Analyzing 165 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'ip_design_lms_pcore_0_0' is not ideal for floorplanning, since the cellview 'LMS' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2532.160 ; gain = 0.000 ; free physical = 3043 ; free virtual = 19392
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: 7851a296
+INFO: [Common 17-83] Releasing license: Synthesis
+47 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:34 ; elapsed = 00:00:30 . Memory (MB): peak = 2532.160 ; gain = 64.031 ; free physical = 3194 ; free virtual = 19544
+INFO: [Common 17-1381] The checkpoint '/home/user/Desktop/lab_4/lab_4.runs/ip_design_lms_pcore_0_0_synth_1/ip_design_lms_pcore_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP ip_design_lms_pcore_0_0, cache-ID = 18b1968c30d8ebcf
+INFO: [Coretcl 2-1174] Renamed 7 cell refs.
+INFO: [Common 17-1381] The checkpoint '/home/user/Desktop/lab_4/lab_4.runs/ip_design_lms_pcore_0_0_synth_1/ip_design_lms_pcore_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file ip_design_lms_pcore_0_0_utilization_synth.rpt -pb ip_design_lms_pcore_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Sep 30 20:22:24 2026...

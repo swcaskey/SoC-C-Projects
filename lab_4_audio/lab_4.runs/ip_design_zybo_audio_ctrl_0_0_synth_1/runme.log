@@ -1,0 +1,309 @@
+
+*** Running vivado
+    with args -log ip_design_zybo_audio_ctrl_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source ip_design_zybo_audio_ctrl_0_0.tcl
+
+
+****** Vivado v2021.1 (64-bit)
+  **** SW Build 3247384 on Thu Jun 10 19:36:07 MDT 2021
+  **** IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+source ip_design_zybo_audio_ctrl_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/software/digilent'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/user/Downloads/sources/zybo/adventures_with_ip_integrator/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/software/Xilinx/Vivado/2021.1/data/ip'.
+Command: synth_design -top ip_design_zybo_audio_ctrl_0_0 -part xc7z010clg400-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 75259
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2461.230 ; gain = 0.000 ; free physical = 167 ; free virtual = 17781
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'ip_design_zybo_audio_ctrl_0_0' [/home/user/Desktop/lab_4/lab_4.gen/sources_1/bd/ip_design/ip/ip_design_zybo_audio_ctrl_0_0/synth/ip_design_zybo_audio_ctrl_0_0.vhd:88]
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_MIN_SIZE bound to: 32'b00000000000000000000000111111111 
+	Parameter C_USE_WSTRB bound to: 0 - type: integer 
+	Parameter C_DPHASE_TIMEOUT bound to: 8 - type: integer 
+	Parameter C_BASEADDR bound to: 32'b11111111111111111111111111111111 
+	Parameter C_HIGHADDR bound to: 32'b00000000000000000000000000000000 
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_NUM_REG bound to: 1 - type: integer 
+	Parameter C_NUM_MEM bound to: 1 - type: integer 
+	Parameter C_SLV_AWIDTH bound to: 32 - type: integer 
+	Parameter C_SLV_DWIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'i2s_ctrl' declared at '/home/user/Desktop/lab_4/lab_4.gen/sources_1/bd/ip_design/ipshared/9e4b/zybo_audio_codec.srcs/sources_1/imports/i2s_audio/i2s_ctrl.vhd:105' bound to instance 'U0' of component 'i2s_ctrl' [/home/user/Desktop/lab_4/lab_4.gen/sources_1/bd/ip_design/ip/ip_design_zybo_audio_ctrl_0_0/synth/ip_design_zybo_audio_ctrl_0_0.vhd:165]
+INFO: [Synth 8-638] synthesizing module 'i2s_ctrl' [/home/user/Desktop/lab_4/lab_4.gen/sources_1/bd/ip_design/ipshared/9e4b/zybo_audio_codec.srcs/sources_1/imports/i2s_audio/i2s_ctrl.vhd:174]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif' [/home/user/Desktop/lab_4/lab_4.gen/sources_1/bd/ip_design/ipshared/9e4b/zybo_audio_codec.srcs/sources_1/imports/i2s_audio/axi_lite_ipif.vhd:240]
+INFO: [Synth 8-638] synthesizing module 'slave_attachment' [/home/user/Desktop/lab_4/lab_4.gen/sources_1/bd/ip_design/ipshared/9e4b/zybo_audio_codec.srcs/sources_1/imports/i2s_audio/slave_attachment.vhd:226]
+INFO: [Synth 8-638] synthesizing module 'address_decoder' [/home/user/Desktop/lab_4/lab_4.gen/sources_1/bd/ip_design/ipshared/9e4b/zybo_audio_codec.srcs/sources_1/imports/i2s_audio/address_decoder.vhd:176]
+INFO: [Synth 8-638] synthesizing module 'pselect_f' [/home/user/Desktop/lab_4/lab_4.gen/sources_1/bd/ip_design/ipshared/9e4b/zybo_audio_codec.srcs/sources_1/imports/i2s_audio/pselect_f.vhd:165]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f' (1#1) [/home/user/Desktop/lab_4/lab_4.gen/sources_1/bd/ip_design/ipshared/9e4b/zybo_audio_codec.srcs/sources_1/imports/i2s_audio/pselect_f.vhd:165]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized0' [/home/user/Desktop/lab_4/lab_4.gen/sources_1/bd/ip_design/ipshared/9e4b/zybo_audio_codec.srcs/sources_1/imports/i2s_audio/pselect_f.vhd:165]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized0' (1#1) [/home/user/Desktop/lab_4/lab_4.gen/sources_1/bd/ip_design/ipshared/9e4b/zybo_audio_codec.srcs/sources_1/imports/i2s_audio/pselect_f.vhd:165]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized1' [/home/user/Desktop/lab_4/lab_4.gen/sources_1/bd/ip_design/ipshared/9e4b/zybo_audio_codec.srcs/sources_1/imports/i2s_audio/pselect_f.vhd:165]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized1' (1#1) [/home/user/Desktop/lab_4/lab_4.gen/sources_1/bd/ip_design/ipshared/9e4b/zybo_audio_codec.srcs/sources_1/imports/i2s_audio/pselect_f.vhd:165]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized2' [/home/user/Desktop/lab_4/lab_4.gen/sources_1/bd/ip_design/ipshared/9e4b/zybo_audio_codec.srcs/sources_1/imports/i2s_audio/pselect_f.vhd:165]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized2' (1#1) [/home/user/Desktop/lab_4/lab_4.gen/sources_1/bd/ip_design/ipshared/9e4b/zybo_audio_codec.srcs/sources_1/imports/i2s_audio/pselect_f.vhd:165]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized3' [/home/user/Desktop/lab_4/lab_4.gen/sources_1/bd/ip_design/ipshared/9e4b/zybo_audio_codec.srcs/sources_1/imports/i2s_audio/pselect_f.vhd:165]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized3' (1#1) [/home/user/Desktop/lab_4/lab_4.gen/sources_1/bd/ip_design/ipshared/9e4b/zybo_audio_codec.srcs/sources_1/imports/i2s_audio/pselect_f.vhd:165]
+INFO: [Synth 8-256] done synthesizing module 'address_decoder' (2#1) [/home/user/Desktop/lab_4/lab_4.gen/sources_1/bd/ip_design/ipshared/9e4b/zybo_audio_codec.srcs/sources_1/imports/i2s_audio/address_decoder.vhd:176]
+INFO: [Synth 8-226] default block is never used [/home/user/Desktop/lab_4/lab_4.gen/sources_1/bd/ip_design/ipshared/9e4b/zybo_audio_codec.srcs/sources_1/imports/i2s_audio/slave_attachment.vhd:379]
+INFO: [Synth 8-256] done synthesizing module 'slave_attachment' (3#1) [/home/user/Desktop/lab_4/lab_4.gen/sources_1/bd/ip_design/ipshared/9e4b/zybo_audio_codec.srcs/sources_1/imports/i2s_audio/slave_attachment.vhd:226]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif' (4#1) [/home/user/Desktop/lab_4/lab_4.gen/sources_1/bd/ip_design/ipshared/9e4b/zybo_audio_codec.srcs/sources_1/imports/i2s_audio/axi_lite_ipif.vhd:240]
+INFO: [Synth 8-638] synthesizing module 'user_logic' [/home/user/Desktop/lab_4/lab_4.gen/sources_1/bd/ip_design/ipshared/9e4b/zybo_audio_codec.srcs/sources_1/imports/i2s_audio/user_logic.vhd:131]
+INFO: [Synth 8-3491] module 'iis_deser' declared at '/home/user/Desktop/lab_4/lab_4.gen/sources_1/bd/ip_design/ipshared/9e4b/zybo_audio_codec.srcs/sources_1/imports/i2s_audio/iis_deser.vhd:24' bound to instance 'Inst_iis_deser' of component 'iis_deser' [/home/user/Desktop/lab_4/lab_4.gen/sources_1/bd/ip_design/ipshared/9e4b/zybo_audio_codec.srcs/sources_1/imports/i2s_audio/user_logic.vhd:206]
+INFO: [Synth 8-638] synthesizing module 'iis_deser' [/home/user/Desktop/lab_4/lab_4.gen/sources_1/bd/ip_design/ipshared/9e4b/zybo_audio_codec.srcs/sources_1/imports/i2s_audio/iis_deser.vhd:35]
+INFO: [Synth 8-256] done synthesizing module 'iis_deser' (5#1) [/home/user/Desktop/lab_4/lab_4.gen/sources_1/bd/ip_design/ipshared/9e4b/zybo_audio_codec.srcs/sources_1/imports/i2s_audio/iis_deser.vhd:35]
+INFO: [Synth 8-3491] module 'iis_ser' declared at '/home/user/Desktop/lab_4/lab_4.gen/sources_1/bd/ip_design/ipshared/9e4b/zybo_audio_codec.srcs/sources_1/imports/i2s_audio/iis_ser.vhd:24' bound to instance 'Inst_iis_ser' of component 'iis_ser' [/home/user/Desktop/lab_4/lab_4.gen/sources_1/bd/ip_design/ipshared/9e4b/zybo_audio_codec.srcs/sources_1/imports/i2s_audio/user_logic.vhd:227]
+INFO: [Synth 8-638] synthesizing module 'iis_ser' [/home/user/Desktop/lab_4/lab_4.gen/sources_1/bd/ip_design/ipshared/9e4b/zybo_audio_codec.srcs/sources_1/imports/i2s_audio/iis_ser.vhd:34]
+INFO: [Synth 8-256] done synthesizing module 'iis_ser' (6#1) [/home/user/Desktop/lab_4/lab_4.gen/sources_1/bd/ip_design/ipshared/9e4b/zybo_audio_codec.srcs/sources_1/imports/i2s_audio/iis_ser.vhd:34]
+INFO: [Synth 8-256] done synthesizing module 'user_logic' (7#1) [/home/user/Desktop/lab_4/lab_4.gen/sources_1/bd/ip_design/ipshared/9e4b/zybo_audio_codec.srcs/sources_1/imports/i2s_audio/user_logic.vhd:131]
+INFO: [Synth 8-256] done synthesizing module 'i2s_ctrl' (8#1) [/home/user/Desktop/lab_4/lab_4.gen/sources_1/bd/ip_design/ipshared/9e4b/zybo_audio_codec.srcs/sources_1/imports/i2s_audio/i2s_ctrl.vhd:174]
+INFO: [Synth 8-256] done synthesizing module 'ip_design_zybo_audio_ctrl_0_0' (9#1) [/home/user/Desktop/lab_4/lab_4.gen/sources_1/bd/ip_design/ip/ip_design_zybo_audio_ctrl_0_0/synth/ip_design_zybo_audio_ctrl_0_0.vhd:88]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2461.230 ; gain = 0.000 ; free physical = 1562 ; free virtual = 17873
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2461.230 ; gain = 0.000 ; free physical = 3249 ; free virtual = 19561
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2461.230 ; gain = 0.000 ; free physical = 3248 ; free virtual = 19561
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2461.230 ; gain = 0.000 ; free physical = 3120 ; free virtual = 19432
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2525.129 ; gain = 0.000 ; free physical = 2979 ; free virtual = 19297
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2525.129 ; gain = 0.000 ; free physical = 2978 ; free virtual = 19296
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2525.129 ; gain = 63.898 ; free physical = 3187 ; free virtual = 19512
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2525.129 ; gain = 63.898 ; free physical = 3187 ; free virtual = 19512
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2525.129 ; gain = 63.898 ; free physical = 3187 ; free virtual = 19512
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'slave_attachment'
+INFO: [Synth 8-802] inferred FSM for state register 'iis_state_reg' in module 'iis_deser'
+INFO: [Synth 8-802] inferred FSM for state register 'iis_state_reg' in module 'iis_ser'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 sm_idle |                             0010 |                               00
+                 sm_read |                             1000 |                               01
+                sm_write |                             0100 |                               10
+                 sm_resp |                             0001 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'slave_attachment'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                   reset |                          0000001 |                              000
+               wait_left |                          0000100 |                              001
+               skip_left |                          1000000 |                              010
+               read_left |                          0100000 |                              011
+              wait_right |                          0010000 |                              100
+              skip_right |                          0001000 |                              101
+              read_right |                          0000010 |                              110
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'iis_state_reg' using encoding 'one-hot' in module 'iis_deser'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                   reset |                            00001 |                              000
+               wait_left |                            00100 |                              001
+              write_left |                            10000 |                              010
+              wait_right |                            01000 |                              011
+             write_right |                            00010 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'iis_state_reg' using encoding 'one-hot' in module 'iis_ser'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2525.129 ; gain = 63.898 ; free physical = 3106 ; free virtual = 19433
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   11 Bit       Adders := 1     
+	   2 Input    5 Bit       Adders := 2     
+	   2 Input    4 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 3     
+	               24 Bit    Registers := 6     
+	               11 Bit    Registers := 1     
+	                5 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 16    
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 3     
+	   4 Input   32 Bit        Muxes := 2     
+	   2 Input   24 Bit        Muxes := 2     
+	   2 Input    9 Bit        Muxes := 1     
+	   7 Input    7 Bit        Muxes := 1     
+	   2 Input    7 Bit        Muxes := 6     
+	   5 Input    5 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 4     
+	   4 Input    4 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 5     
+	   2 Input    2 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 21    
+	   7 Input    1 Bit        Muxes := 1     
+	   5 Input    1 Bit        Muxes := 1     
+	   4 Input    1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 2525.129 ; gain = 63.898 ; free physical = 3115 ; free virtual = 19445
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 2525.129 ; gain = 63.898 ; free physical = 2848 ; free virtual = 19183
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 2525.129 ; gain = 63.898 ; free physical = 2846 ; free virtual = 19181
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 2525.129 ; gain = 63.898 ; free physical = 2821 ; free virtual = 19156
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 2525.129 ; gain = 63.898 ; free physical = 2503 ; free virtual = 18841
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 2525.129 ; gain = 63.898 ; free physical = 2503 ; free virtual = 18841
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 2525.129 ; gain = 63.898 ; free physical = 2502 ; free virtual = 18840
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 2525.129 ; gain = 63.898 ; free physical = 2501 ; free virtual = 18839
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 2525.129 ; gain = 63.898 ; free physical = 2501 ; free virtual = 18839
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 2525.129 ; gain = 63.898 ; free physical = 2501 ; free virtual = 18839
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |LUT1 |     5|
+|2     |LUT2 |    17|
+|3     |LUT3 |    14|
+|4     |LUT4 |    11|
+|5     |LUT5 |    82|
+|6     |LUT6 |    59|
+|7     |FDRE |   293|
+|8     |FDSE |     1|
++------+-----+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 2525.129 ; gain = 63.898 ; free physical = 2501 ; free virtual = 18839
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2525.129 ; gain = 0.000 ; free physical = 2548 ; free virtual = 18886
+Synthesis Optimization Complete : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 2525.129 ; gain = 63.898 ; free physical = 2548 ; free virtual = 18886
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2525.129 ; gain = 0.000 ; free physical = 2537 ; free virtual = 18877
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2525.129 ; gain = 0.000 ; free physical = 2539 ; free virtual = 18881
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: e84a2bc6
+INFO: [Common 17-83] Releasing license: Synthesis
+52 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:30 ; elapsed = 00:00:26 . Memory (MB): peak = 2525.129 ; gain = 64.031 ; free physical = 2721 ; free virtual = 19063
+INFO: [Common 17-1381] The checkpoint '/home/user/Desktop/lab_4/lab_4.runs/ip_design_zybo_audio_ctrl_0_0_synth_1/ip_design_zybo_audio_ctrl_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP ip_design_zybo_audio_ctrl_0_0, cache-ID = b6537ec764507907
+INFO: [Coretcl 2-1174] Renamed 7 cell refs.
+INFO: [Common 17-1381] The checkpoint '/home/user/Desktop/lab_4/lab_4.runs/ip_design_zybo_audio_ctrl_0_0_synth_1/ip_design_zybo_audio_ctrl_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file ip_design_zybo_audio_ctrl_0_0_utilization_synth.rpt -pb ip_design_zybo_audio_ctrl_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Sep 30 20:22:20 2026...
