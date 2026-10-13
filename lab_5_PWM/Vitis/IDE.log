@@ -1,0 +1,22 @@
+19:43:51 INFO  : Launching XSCT server: xsct -n  -interactive /home/user/Desktop/lab_5/Vitis/temp_xsdb_launch_script.tcl
+19:43:51 INFO  : Platform repository initialization has completed.
+19:43:51 INFO  : Registering command handlers for Vitis TCF services
+19:43:54 INFO  : XSCT server has started successfully.
+19:43:54 INFO  : plnx-install-location is set to ''
+19:43:54 INFO  : Successfully done setting XSCT server connection channel  
+19:43:54 INFO  : Successfully done query RDI_DATADIR 
+19:43:54 INFO  : Successfully done setting workspace for the tool. 
+19:56:52 INFO  : Launching XSCT server: xsct -n  -interactive /home/user/Desktop/lab_5/Vitis/temp_xsdb_launch_script.tcl
+19:56:52 INFO  : Platform repository initialization has completed.
+19:56:53 INFO  : Registering command handlers for Vitis TCF services
+19:56:57 INFO  : XSCT server has started successfully.
+19:56:57 INFO  : plnx-install-location is set to ''
+19:56:57 INFO  : Successfully done setting XSCT server connection channel  
+19:56:57 INFO  : Successfully done setting workspace for the tool. 
+19:56:57 INFO  : Successfully done query RDI_DATADIR 
+19:57:43 INFO  : Result from executing command 'getProjects': PWM_wrapper
+19:57:43 INFO  : Result from executing command 'getPlatforms': 
+19:57:43 WARN  : An unexpected exception occurred in the module 'platform project logging'
+19:57:43 INFO  : Platform 'PWM_wrapper' is added to custom repositories.
+19:57:52 INFO  : Platform 'PWM_wrapper' is added to custom repositories.
+20:06:45 INFO  : Result from executing command 'removePlatformRepo': 
