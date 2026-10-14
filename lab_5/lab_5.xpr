@@ -98,20 +98,20 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="PWM.bd" FileRelPathName="ip/PWM_processing_system7_0_0/PWM_processing_system7_0_0.xci">
-          <Proxy FileSetName="PWM_processing_system7_0_0"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="PWM.bd" FileRelPathName="ip/PWM_axi_intc_0_0/PWM_axi_intc_0_0.xci">
           <Proxy FileSetName="PWM_axi_intc_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="PWM.bd" FileRelPathName="ip/PWM_axi_gpio_0_0/PWM_axi_gpio_0_0.xci">
-          <Proxy FileSetName="PWM_axi_gpio_0_0"/>
+        <CompFileExtendedInfo CompFileName="PWM.bd" FileRelPathName="ip/PWM_axi_timer_0_0/PWM_axi_timer_0_0.xci">
+          <Proxy FileSetName="PWM_axi_timer_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="PWM.bd" FileRelPathName="ip/PWM_rst_ps7_0_100M_0/PWM_rst_ps7_0_100M_0.xci">
           <Proxy FileSetName="PWM_rst_ps7_0_100M_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="PWM.bd" FileRelPathName="ip/PWM_axi_timer_0_0/PWM_axi_timer_0_0.xci">
-          <Proxy FileSetName="PWM_axi_timer_0_0"/>
+        <CompFileExtendedInfo CompFileName="PWM.bd" FileRelPathName="ip/PWM_processing_system7_0_0/PWM_processing_system7_0_0.xci">
+          <Proxy FileSetName="PWM_processing_system7_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="PWM.bd" FileRelPathName="ip/PWM_axi_gpio_0_0/PWM_axi_gpio_0_0.xci">
+          <Proxy FileSetName="PWM_axi_gpio_0_0"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PGENDIR/sources_1/bd/PWM/hdl/PWM_wrapper.v">

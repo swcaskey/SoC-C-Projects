@@ -1,6 +1,9 @@
 /******************************************************************************
  * AXI Timer PWM Lab - Zynq-7000 (classic xparameters.h/BSP flow)
- * Based on Xilinx xtmrctr_pwm_example.c (MIT License, Xilinx/AMD).
+ * Derived from Xilinx xtmrctr_pwm_example.c.
+ * Copyright (C) 2018 - 2020 Xilinx, Inc. All rights reserved.
+ * Copyright (C) 2022 - 2026 Advanced Micro Devices, Inc. All Rights Reserved.
+ * SPDX-License-Identifier: MIT
  *
  * Block design in the lab handout:
  *   axi_timer_0/interrupt -> xlconcat_0/In0 -> axi_intc_0/intr[0]
@@ -21,9 +24,13 @@
 #include "xil_exception.h"
 #include "xparameters.h"
 #include "xstatus.h"
+#include "xtime_l.h"
+#include "xil_io.h"
 
 /************************** Constant Definitions *****************************/
+#ifndef LAB_PART_B
 #define LAB_PART_B              0   /* 0: automatic ramp, 1: buttons */
+#endif
 
 #define TMRCTR_DEVICE_ID        XPAR_TMRCTR_0_DEVICE_ID
 #define INTC_DEVICE_ID          XPAR_INTC_0_DEVICE_ID
@@ -31,7 +38,7 @@
 #define GPIO_DEVICE_ID          XPAR_GPIO_0_DEVICE_ID
 
 /* In the supplied block diagram, Timer is xlconcat In0 (AXI INTC bit 0). */
-#define TMRCTR_INTERRUPT_ID     0U
+#define TMRCTR_INTERRUPT_ID     XPAR_INTC_0_TMRCTR_0_VEC_ID
 
 /* GIC interrupt for axi_intc_0 connected to Zynq IRQ_F2P[0] */
 #define GIC_INTC_INTERRUPT_ID XPS_FPGA0_INT_ID
@@ -43,8 +50,14 @@
 #define XTC_PWM_OPTION          0x00000200UL
 #define CYCLE_PER_DUTYCYCLE     5U        /* 5 PWM periods per brightness step */
 #define MAX_DUTYCYCLE           100U
-#define DUTYCYCLE_DIVISOR       100U
-#define WAIT_COUNT              30000000U
+#define RAMP_LEVELS             100U
+#define INTERRUPT_TIMEOUT_MS    100U
+#define PWM_CLOCK_NS            10U
+#define PWM_PERIOD_COUNTS       100000U
+
+#if XPAR_TMRCTR_0_CLOCK_FREQ_HZ != 100000000U
+#error This application expects the supplied 100 MHz AXI Timer hardware.
+#endif
 
 /* For reference only (100 MHz down-counter): (100000 cycles - 2) = 0x1869E.
  * XTmrCtr_PwmConfigure() calculates and writes TLR0/TLR1 for us. */
@@ -54,7 +67,8 @@
 #define BUTTON0_MASK            0x01U     /* btns_4bits[0]: decrease */
 #define BUTTON1_MASK            0x02U     /* btns_4bits[1]: increase */
 #define BUTTON_STEP             5U        /* percent per press */
-#define BUTTON_POLL_TICKS       20U       /* 20 ms between reads */
+#define BUTTON_POLL_TICKS       1U        /* sample once per PWM period */
+#define BUTTON_DEBOUNCE_TICKS   20U       /* 20 identical samples */
 
 /************************** Function Prototypes ******************************/
 static int TmrCtrPwmExample(XTmrCtr *InstancePtr);
@@ -63,7 +77,7 @@ static int TmrCtrSetupIntrSystem(XIntc *IntcInstancePtr,
                                  XTmrCtr *TmrCtrInstancePtr);
 static void TimerCounterHandler(void *CallBackRef, u8 TmrCtrNumber);
 static int WaitForCycles(u32 Cycles);
-static void SetPwmDuty(XTmrCtr *InstancePtr, u32 DutyPercent);
+static int SetPwmDuty(XTmrCtr *InstancePtr, u32 Level, u32 MaxLevel);
 
 /************************** Variable Definitions *****************************/
 static XIntc InterruptController;
@@ -94,7 +108,14 @@ int main(void)
 static int TmrCtrPwmExample(XTmrCtr *TmrCtrInstancePtr)
 {
     int Status;
+#if LAB_PART_B
     u8 DutyCycle;
+#endif
+
+    /* Start the PS global timer for a real elapsed-time IRQ timeout.
+     * Preserve its count and other control bits. It does not drive PWM. */
+    Xil_Out32(GLOBAL_TMR_BASEADDR + GTIMER_CONTROL_OFFSET,
+              Xil_In32(GLOBAL_TMR_BASEADDR + GTIMER_CONTROL_OFFSET) | 1U);
 
     Status = XTmrCtr_Initialize(TmrCtrInstancePtr, TMRCTR_DEVICE_ID);
     if (Status != XST_SUCCESS) {
@@ -106,15 +127,15 @@ static int TmrCtrPwmExample(XTmrCtr *TmrCtrInstancePtr)
         return XST_FAILURE;
     }
 
+    /* Required Xilinx callback function-pointer registration. */
+    XTmrCtr_SetHandler(TmrCtrInstancePtr, TimerCounterHandler,
+                       TmrCtrInstancePtr);
+
     Status = TmrCtrSetupIntrSystem(&InterruptController, &GicController,
                                    TmrCtrInstancePtr);
     if (Status != XST_SUCCESS) {
         return XST_FAILURE;
     }
-
-    /* Required Xilinx callback function-pointer registration. */
-    XTmrCtr_SetHandler(TmrCtrInstancePtr, TimerCounterHandler,
-                       TmrCtrInstancePtr);
 
     /* Enable interrupts for both of the PWM timers (as in Xilinx example). */
     XTmrCtr_SetOptions(TmrCtrInstancePtr, TMRCTR_0, XTC_INT_MODE_OPTION);
@@ -127,9 +148,15 @@ static int TmrCtrPwmExample(XTmrCtr *TmrCtrInstancePtr)
         return XST_FAILURE;
     }
     XGpio_SetDataDirection(&GpioInstance, GPIO_CHANNEL, 0x0FU);
+    /* Buttons are sampled with the timer timebase; GPIO IRQ stays disabled. */
+    XGpio_InterruptGlobalDisable(&GpioInstance);
+    XGpio_InterruptDisable(&GpioInstance, XGPIO_IR_CH1_MASK);
 
     DutyCycle = 50U;
-    SetPwmDuty(TmrCtrInstancePtr, DutyCycle);
+    Status = SetPwmDuty(TmrCtrInstancePtr, DutyCycle, MAX_DUTYCYCLE);
+    if (Status != XST_SUCCESS) {
+        return Status;
+    }
     /* Fail visibly rather than waiting forever if the timer IRQ is absent. */
     if (WaitForCycles(BUTTON_POLL_TICKS) != XST_SUCCESS) {
         xil_printf("ERROR: PWM timer interrupts not received in Part B\r\n");
@@ -139,37 +166,53 @@ static int TmrCtrPwmExample(XTmrCtr *TmrCtrInstancePtr)
 
     {
         u32 LastButtons = 0U;
-        u32 LastSampleTick = PeriodTimerHit;
+        u32 CandidateButtons = 0U;
+        u32 StableSamples = 0U;
         u32 Buttons;
+        u32 Pressed;
 
         while (1) {
-            /* Timer 0 interrupt supplies the 1 ms timebase for button sampling. */
-            if ((u32)(PeriodTimerHit - LastSampleTick) < BUTTON_POLL_TICKS) {
+            if (WaitForCycles(BUTTON_POLL_TICKS) != XST_SUCCESS) {
+                xil_printf("ERROR: PWM timer interrupts stopped\r\n");
+                return XST_FAILURE;
+            }
+            Buttons = XGpio_DiscreteRead(&GpioInstance, GPIO_CHANNEL) &
+                       (BUTTON0_MASK | BUTTON1_MASK);
+            if (Buttons != CandidateButtons) {
+                CandidateButtons = Buttons;
+                StableSamples = 1U;
+            } else if (StableSamples < BUTTON_DEBOUNCE_TICKS) {
+                StableSamples++;
+            }
+            if (StableSamples < BUTTON_DEBOUNCE_TICKS ||
+                Buttons == LastButtons) {
                 continue;
             }
-            LastSampleTick = PeriodTimerHit;
-            Buttons = XGpio_DiscreteRead(&GpioInstance, GPIO_CHANNEL);
 
-            if ((Buttons & BUTTON0_MASK) && !(LastButtons & BUTTON0_MASK)) {
-                DutyCycle = (DutyCycle <= BUTTON_STEP) ? 1U :
+            Pressed = Buttons & ~LastButtons;
+            LastButtons = Buttons;
+            /* One change per debounced press; simultaneous presses ignored. */
+            if (Buttons == BUTTON0_MASK && Pressed == BUTTON0_MASK) {
+                DutyCycle = (DutyCycle <= BUTTON_STEP) ? 0U :
                             (u8)(DutyCycle - BUTTON_STEP);
-                SetPwmDuty(TmrCtrInstancePtr, DutyCycle);
+                (void)SetPwmDuty(TmrCtrInstancePtr, DutyCycle, MAX_DUTYCYCLE);
                 xil_printf("Brightness = %d%%\r\n", DutyCycle);
-            }
-            if ((Buttons & BUTTON1_MASK) && !(LastButtons & BUTTON1_MASK)) {
+            } else if (Buttons == BUTTON1_MASK && Pressed == BUTTON1_MASK) {
                 DutyCycle = (DutyCycle >= MAX_DUTYCYCLE - BUTTON_STEP) ?
                             MAX_DUTYCYCLE : (u8)(DutyCycle + BUTTON_STEP);
-                SetPwmDuty(TmrCtrInstancePtr, DutyCycle);
+                (void)SetPwmDuty(TmrCtrInstancePtr, DutyCycle, MAX_DUTYCYCLE);
                 xil_printf("Brightness = %d%%\r\n", DutyCycle);
             }
-            LastButtons = Buttons;
         }
     }
 #else
-    /* Part A: 100 brightness levels x 5 ms/level = 500 ms per ramp.
-     * Driver requires HIGH_TIME >= 2 timer clocks; 1% looks nearly off. */
-    DutyCycle = 1U;
-    SetPwmDuty(TmrCtrInstancePtr, DutyCycle);
+    /* Part A: 100 levels including off and near-full intensity.
+     * 100 levels x 5 interrupts/level x 1 ms/interrupt = 500 ms.
+     * The callback updates brightness without restarting either counter. */
+    Status = SetPwmDuty(TmrCtrInstancePtr, 0U, RAMP_LEVELS - 1U);
+    if (Status != XST_SUCCESS) {
+        return Status;
+    }
     xil_printf("Part A: repeating 500 ms PWM brightness ramp\r\n");
 
     while (1) {
@@ -178,42 +221,68 @@ static int TmrCtrPwmExample(XTmrCtr *TmrCtrInstancePtr)
             xil_printf("ERROR: PWM timer interrupts not received\r\n");
             return XST_FAILURE;
         }
-
-        DutyCycle++;
-        if (DutyCycle > MAX_DUTYCYCLE) {
-            DutyCycle = 1U;
-        }
-        SetPwmDuty(TmrCtrInstancePtr, DutyCycle);
     }
 #endif
 }
 
 /*****************************************************************************/
-/* This follows the Xilinx example's disable -> configure -> enable pattern.  */
-static void SetPwmDuty(XTmrCtr *InstancePtr, u32 DutyPercent)
+/* Use Xilinx PWM APIs at startup. Subsequent changes update only TLR1,
+ * which auto-reloads in hardware; the 1 ms carrier keeps running.
+ * Equal TLRs produce LOW, so Level=0 deliberately uses equal loads.
+ * Exact 100% is not representable: the top level is 99.999% at 100 MHz. */
+static int SetPwmDuty(XTmrCtr *InstancePtr, u32 Level, u32 MaxLevel)
 {
-    u32 HighTime = (PWM_PERIOD / DUTYCYCLE_DIVISOR) * DutyPercent;
+    u32 HighCounts;
+    u32 HighLoad;
 
-    /* AXI Timer can drive PWM0 LOW if TLR1 == TLR0 (exact 100%).
-     * At 100 MHz, 99.99% leaves a 100 ns LOW interval and appears fully ON.
-     * Keep TLR1 strictly below TLR0, including at the 100% endpoint. */
-    if (DutyPercent >= MAX_DUTYCYCLE) {
-        HighTime = PWM_PERIOD - (PWM_PERIOD / 10000U);
+    if (MaxLevel == 0U || Level > MaxLevel) {
+        return XST_FAILURE;
     }
+    if (Level == 0U) {
+        HighCounts = PWM_PERIOD_COUNTS;
+    } else if (Level == MaxLevel) {
+        HighCounts = PWM_PERIOD_COUNTS - 1U;
+    } else {
+        HighCounts = (PWM_PERIOD_COUNTS * Level) / MaxLevel;
+        if (HighCounts < 2U) {
+            HighCounts = 2U;
+        }
+    }
+    HighLoad = HighCounts - 2U;
 
-    XTmrCtr_PwmDisable(InstancePtr);
-    (void)XTmrCtr_PwmConfigure(InstancePtr, PWM_PERIOD, HighTime);
-    XTmrCtr_PwmEnable(InstancePtr);
+    if (!InstancePtr->IsPwmEnabled) {
+        XTmrCtr_PwmDisable(InstancePtr);
+        /* The return value is an achieved-duty byte, not a status code.
+         * Arguments are validated above; check actual register values. */
+        (void)XTmrCtr_PwmConfigure(InstancePtr, PWM_PERIOD,
+                                   HighCounts * PWM_CLOCK_NS);
+        if (XTmrCtr_GetLoadReg(InstancePtr->BaseAddress, TMRCTR_0) !=
+            PWM_TLR0_1MS ||
+            XTmrCtr_GetLoadReg(InstancePtr->BaseAddress, TMRCTR_1) !=
+            HighLoad) {
+            xil_printf("ERROR: PWM load register configuration failed\r\n");
+            return XST_FAILURE;
+        }
+        XTmrCtr_PwmEnable(InstancePtr);
+    } else {
+        XTmrCtr_SetResetValue(InstancePtr, TMRCTR_1, HighLoad);
+    }
+    return XST_SUCCESS;
 }
 
 /*****************************************************************************/
 static int WaitForCycles(u32 Cycles)
 {
     u32 LastTick = PeriodTimerHit;
-    u32 WaitCount = WAIT_COUNT;
+    XTime StartTime;
+    XTime Now;
+
+    XTime_GetTime(&StartTime);
 
     while ((u32)(PeriodTimerHit - LastTick) < Cycles) {
-        if (--WaitCount == 0U) {
+        XTime_GetTime(&Now);
+        if ((Now - StartTime) >=
+            ((XTime)COUNTS_PER_SECOND * INTERRUPT_TIMEOUT_MS) / 1000U) {
             return XST_FAILURE;
         }
     }
@@ -224,9 +293,25 @@ static int WaitForCycles(u32 Cycles)
 /* Required callback: registered with XTmrCtr_SetHandler().                    */
 static void TimerCounterHandler(void *CallBackRef, u8 TmrCtrNumber)
 {
+#if LAB_PART_B
     (void)CallBackRef;
+#else
+    XTmrCtr *InstancePtr = (XTmrCtr *)CallBackRef;
+    static u32 NoOfCycles = 0U;
+    static u32 DutyCycle = 0U;
+#endif
     if (TmrCtrNumber == TMRCTR_0) {
         PeriodTimerHit++;
+#if !LAB_PART_B
+        if (++NoOfCycles == CYCLE_PER_DUTYCYCLE) {
+            NoOfCycles = 0U;
+            if (++DutyCycle == RAMP_LEVELS) {
+                DutyCycle = 0U;
+            }
+            /* A single load-register write; no stop/restart or UART in ISR. */
+            (void)SetPwmDuty(InstancePtr, DutyCycle, RAMP_LEVELS - 1U);
+        }
+#endif
     }
     if (TmrCtrNumber == TMRCTR_1) {
         HighTimerHit++;
