@@ -1,11 +1,5 @@
 /******************************************************************************
- * AXI Timer PWM Lab - Zynq-7000 (classic xparameters.h/BSP flow)
- * Derived from Xilinx xtmrctr_pwm_example.c.
- * Copyright (C) 2018 - 2020 Xilinx, Inc. All rights reserved.
- * Copyright (C) 2022 - 2026 Advanced Micro Devices, Inc. All Rights Reserved.
- * SPDX-License-Identifier: MIT
- *
- * Block design in the lab handout:
+ * Block design:
  *   axi_timer_0/interrupt -> xlconcat_0/In0 -> axi_intc_0/intr[0]
  *   axi_gpio_0/ip2intc_irpt -> xlconcat_0/In1 -> axi_intc_0/intr[1]
  *   axi_intc_0/irq -> processing_system7_0/IRQ_F2P[0]
