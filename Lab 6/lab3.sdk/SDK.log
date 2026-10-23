@@ -1,0 +1,24 @@
+04:21:25 INFO  : Launching XSDB server: xsdb.bat -interactive C:\xup\adv_embedded\2016_1_zynq_labs\lab1\lab1.sdk\temp_xsdb_launch_script.tcl
+04:21:28 INFO  : XSDB server has started successfully.
+04:21:29 INFO  : Processing command line option -hwspec C:/xup/adv_embedded/2016_1_zynq_labs/lab1/lab1.sdk/system_wrapper.hdf.
+05:06:14 INFO  : Launching XSDB server: xsdb.bat -interactive C:\xup\adv_embedded\2016_1_zynq_labs\lab3\lab3.sdk\temp_xsdb_launch_script.tcl
+05:06:15 INFO  : XSDB server has started successfully.
+05:06:21 INFO  : Processing command line option -hwspec C:/xup/adv_embedded/2016_1_zynq_labs/lab3/lab3.sdk/system_wrapper.hdf.
+05:06:26 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1473422647138,  Project:1473370375801
+05:06:26 INFO  : Project system_wrapper_hw_platform_0's source hardware specification located at C:/xup/adv_embedded/2016_1_zynq_labs/lab1/lab1.sdk/system_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+05:06:43 INFO  : Project system_wrapper_hw_platform_0's source hardware specification location will not be monitored anymore.
+05:09:48 INFO  : Inferring section assignments and sizes from elf file: C:\xup\adv_embedded\2016_1_zynq_labs\lab3\lab3.sdk\hello_world\Debug\hello_world.elf
+05:10:16 INFO  : Successfully generated C:\xup\adv_embedded\2016_1_zynq_labs\lab3\lab3.sdk\hello_world\src\lscript.ld.
+05:10:16 INFO  : Applying linker script to all configurations of project hello_world.
+05:10:16 INFO  : Setting rebuild state to true for all configurations of project hello_world.
+05:11:22 INFO  : Inferring section assignments and sizes from elf file: C:\xup\adv_embedded\2016_1_zynq_labs\lab3\lab3.sdk\lab3\Debug\lab3.elf
+05:11:40 INFO  : Successfully generated C:\xup\adv_embedded\2016_1_zynq_labs\lab3\lab3.sdk\lab3\src\lscript.ld.
+05:11:40 INFO  : Applying linker script to all configurations of project lab3.
+05:11:40 INFO  : Setting rebuild state to true for all configurations of project lab3.
+08:03:29 INFO  : Launching XSDB server: xsdb.bat -interactive C:\xup\adv_embedded\2016_1_zynq_labs\lab3\lab3.sdk\temp_xsdb_launch_script.tcl
+08:03:30 INFO  : XSDB server has started successfully.
+08:03:57 INFO  : Inferring section assignments and sizes from elf file: C:\xup\adv_embedded\2016_1_zynq_labs\lab3\lab3.sdk\lab3\Debug\lab3.elf
+08:04:17 INFO  : Successfully generated C:\xup\adv_embedded\2016_1_zynq_labs\lab3\lab3.sdk\lab3\src\lscript.ld.
+08:04:17 INFO  : Applying linker script to all configurations of project lab3.
+08:04:17 INFO  : Setting rebuild state to true for all configurations of project lab3.

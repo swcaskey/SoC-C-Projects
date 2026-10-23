@@ -1,0 +1,203 @@
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1 (lin64) Build 3247384 Thu Jun 10 19:36:07 MDT 2021
+| Date         : Wed Oct 21 19:21:58 2026
+| Host         : ece13 running 64-bit Ubuntu 20.04.2 LTS
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_rst_processing_system7_0_140M_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_rst_processing_system7_0_140M_0 (xilinx.com:ip:proc_sys_reset:5.0) from (Rev. 9) to (Rev. 13)
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1 (lin64) Build 3247384 Thu Jun 10 19:36:07 MDT 2021
+| Date         : Wed Oct 21 19:21:58 2026
+| Host         : ece13 running 64-bit Ubuntu 20.04.2 LTS
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_rst_processing_system7_0_100M_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_rst_processing_system7_0_100M_0 (xilinx.com:ip:proc_sys_reset:5.0) from (Rev. 9) to (Rev. 13)
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1 (lin64) Build 3247384 Thu Jun 10 19:36:07 MDT 2021
+| Date         : Wed Oct 21 19:21:58 2026
+| Host         : ece13 running 64-bit Ubuntu 20.04.2 LTS
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_processing_system7_0_axi_periph_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_processing_system7_0_axi_periph_0 (xilinx.com:ip:axi_interconnect:2.1) from (Rev. 9) to (Rev. 25)
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1 (lin64) Build 3247384 Thu Jun 10 19:36:07 MDT 2021
+| Date         : Wed Oct 21 19:21:58 2026
+| Host         : ece13 running 64-bit Ubuntu 20.04.2 LTS
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_processing_system7_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_processing_system7_0_0 (xilinx.com:ip:processing_system7:5.5) from (Rev. 3) to (Rev. 6)
+
+2. Upgrade messages
+-------------------
+
+WARNING: upgrade cannot add parameter PCW_TRACE_INTERNAL_WIDTH with default value 32 : a parameter called PCW_TRACE_INTERNAL_WIDTH already exists in processing_system7_v5_5
+WARNING: upgrade cannot add parameter PCW_USE_AXI_NONSECURE with default value 0 : a parameter called PCW_USE_AXI_NONSECURE already exists in processing_system7_v5_5
+WARNING: upgrade cannot add parameter PCW_EN_PTP_ENET0 with default value 1 : a parameter called PCW_EN_PTP_ENET0 already exists in processing_system7_v5_5
+WARNING: upgrade cannot add parameter PCW_EN_PTP_ENET0 with default value 1 : a parameter called PCW_EN_PTP_ENET0 already exists in processing_system7_v5_5
+Added parameter PCW_GP0_NUM_WRITE_THREADS with value 4 (source 'default')
+Added parameter PCW_GP0_NUM_READ_THREADS with value 4 (source 'default')
+Added parameter PCW_GP1_NUM_WRITE_THREADS with value 4 (source 'default')
+Added parameter PCW_GP1_NUM_READ_THREADS with value 4 (source 'default')
+Added parameter PCW_GP0_EN_MODIFIABLE_TXN with value 0 (source 'default')
+Added parameter PCW_GP1_EN_MODIFIABLE_TXN with value 0 (source 'default')
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1 (lin64) Build 3247384 Thu Jun 10 19:36:07 MDT 2021
+| Date         : Wed Oct 21 19:21:58 2026
+| Host         : ece13 running 64-bit Ubuntu 20.04.2 LTS
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_axi_mem_intercon_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_axi_mem_intercon_0 (xilinx.com:ip:axi_interconnect:2.1) from (Rev. 9) to (Rev. 25)
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1 (lin64) Build 3247384 Thu Jun 10 19:36:07 MDT 2021
+| Date         : Wed Oct 21 19:21:58 2026
+| Host         : ece13 running 64-bit Ubuntu 20.04.2 LTS
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_axi_gpio_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_axi_gpio_0_1 (xilinx.com:ip:axi_gpio:2.0) from (Rev. 10) to (Rev. 26)
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1 (lin64) Build 3247384 Thu Jun 10 19:36:07 MDT 2021
+| Date         : Wed Oct 21 19:21:58 2026
+| Host         : ece13 running 64-bit Ubuntu 20.04.2 LTS
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_axi_gpio_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_axi_gpio_0_0 (xilinx.com:ip:axi_gpio:2.0) from (Rev. 10) to (Rev. 26)
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1 (lin64) Build 3247384 Thu Jun 10 19:36:07 MDT 2021
+| Date         : Wed Oct 21 19:21:57 2026
+| Host         : ece13 running 64-bit Ubuntu 20.04.2 LTS
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_axi_bram_ctrl_0_bram_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_axi_bram_ctrl_0_bram_0 from xilinx.com:ip:blk_mem_gen:8.3 (Rev. 2) to xilinx.com:ip:blk_mem_gen:8.4 (Rev. 4)
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1 (lin64) Build 3247384 Thu Jun 10 19:36:07 MDT 2021
+| Date         : Wed Oct 21 19:21:57 2026
+| Host         : ece13 running 64-bit Ubuntu 20.04.2 LTS
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_axi_bram_ctrl_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_axi_bram_ctrl_0_0 from xilinx.com:ip:axi_bram_ctrl:4.0 (Rev. 7) to xilinx.com:ip:axi_bram_ctrl:4.1 (Rev. 5)
+
+2. Upgrade messages
+-------------------
+
+WARNING: upgrade cannot remove parameter C_SELECT_XPM : there is no parameter called C_SELECT_XPM in axi_bram_ctrl_v4_0
+

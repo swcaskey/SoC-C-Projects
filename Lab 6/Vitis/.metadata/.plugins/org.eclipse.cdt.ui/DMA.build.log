@@ -1,0 +1,25 @@
+19:48:56 **** Build of configuration Debug for project DMA ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+ 
+make --no-print-directory main-build
+Building file: ../src/lab4.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lab4.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I/home/user/Desktop/Vitis/system_wrapper/export/system_wrapper/sw/system_wrapper/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/lab4.d" -MT"src/lab4.o" -o "src/lab4.o" "../src/lab4.c"
+Finished building: ../src/lab4.c
+ 
+Building target: DMA.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L/home/user/Desktop/Vitis/system_wrapper/export/system_wrapper/sw/system_wrapper/standalone_ps7_cortexa9_0/bsplib/lib -o "DMA.elf"  ./src/lab4.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: DMA.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size DMA.elf  |tee "DMA.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  41299	   1968	  22696	  65963	  101ab	DMA.elf
+Finished building: DMA.elf.size
+ 
+
+19:48:57 Build Finished (took 949ms)
+

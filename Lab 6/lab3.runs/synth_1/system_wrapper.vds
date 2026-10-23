@@ -1,0 +1,1390 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:07 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Wed Oct 21 19:34:34 2026
+# Process ID: 214469
+# Current directory: /home/user/Desktop/Lab 6/lab3.runs/synth_1
+# Command line: vivado -log system_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source system_wrapper.tcl
+# Log file: /home/user/Desktop/Lab 6/lab3.runs/synth_1/system_wrapper.vds
+# Journal file: /home/user/Desktop/Lab 6/lab3.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source system_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/software/Xilinx/Vivado/2021.1/data/ip'.
+Command: synth_design -top system_wrapper -part xc7z010clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 214845
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2497.227 ; gain = 0.000 ; free physical = 808 ; free virtual = 19644
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'system_wrapper' [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/hdl/system_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'IOBUF' [/home/software/Xilinx/Vivado/2021.1/scripts/rt/data/unisim_comp.v:56188]
+INFO: [Synth 8-6155] done synthesizing module 'IOBUF' (1#1) [/home/software/Xilinx/Vivado/2021.1/scripts/rt/data/unisim_comp.v:56188]
+INFO: [Synth 8-6157] synthesizing module 'system' [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/synth/system.v:1998]
+INFO: [Synth 8-638] synthesizing module 'system_axi_bram_ctrl_0_0' [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/ip/system_axi_bram_ctrl_0_0/synth/system_axi_bram_ctrl_0_0.vhd:104]
+	Parameter C_BRAM_INST_MODE bound to: EXTERNAL - type: string 
+	Parameter C_MEMORY_DEPTH bound to: 8192 - type: integer 
+	Parameter C_BRAM_ADDR_WIDTH bound to: 13 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 16 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_S_AXI_ID_WIDTH bound to: 1 - type: integer 
+	Parameter C_S_AXI_PROTOCOL bound to: AXI4 - type: string 
+	Parameter C_S_AXI_SUPPORTS_NARROW_BURST bound to: 0 - type: integer 
+	Parameter C_SINGLE_PORT_BRAM bound to: 1 - type: integer 
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_READ_LATENCY bound to: 1 - type: integer 
+	Parameter C_RD_CMD_OPTIMIZATION bound to: 0 - type: integer 
+	Parameter C_S_AXI_CTRL_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_CTRL_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_ECC bound to: 0 - type: integer 
+	Parameter C_ECC_TYPE bound to: 0 - type: integer 
+	Parameter C_FAULT_INJECT bound to: 0 - type: integer 
+	Parameter C_ECC_ONOFF_RESET_VALUE bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'axi_bram_ctrl' declared at '/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/33c1/hdl/axi_bram_ctrl_v4_1_rfs.vhd:31357' bound to instance 'U0' of component 'axi_bram_ctrl' [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/ip/system_axi_bram_ctrl_0_0/synth/system_axi_bram_ctrl_0_0.vhd:255]
+INFO: [Synth 8-638] synthesizing module 'axi_bram_ctrl' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/33c1/hdl/axi_bram_ctrl_v4_1_rfs.vhd:31528]
+INFO: [Synth 8-638] synthesizing module 'axi_bram_ctrl_top' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/33c1/hdl/axi_bram_ctrl_v4_1_rfs.vhd:30527]
+INFO: [Synth 8-638] synthesizing module 'full_axi' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/33c1/hdl/axi_bram_ctrl_v4_1_rfs.vhd:29280]
+WARNING: [Synth 8-6774] Null subtype or type declaration found [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/33c1/hdl/axi_bram_ctrl_v4_1_rfs.vhd:29350]
+INFO: [Synth 8-3919] null assignment ignored [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/33c1/hdl/axi_bram_ctrl_v4_1_rfs.vhd:29350]
+INFO: [Synth 8-638] synthesizing module 'sng_port_arb' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/33c1/hdl/axi_bram_ctrl_v4_1_rfs.vhd:11456]
+INFO: [Synth 8-256] done synthesizing module 'sng_port_arb' (2#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/33c1/hdl/axi_bram_ctrl_v4_1_rfs.vhd:11456]
+INFO: [Synth 8-638] synthesizing module 'wr_chnl' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/33c1/hdl/axi_bram_ctrl_v4_1_rfs.vhd:24159]
+INFO: [Synth 8-506] null port 'FaultInjectECC' ignored [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/33c1/hdl/axi_bram_ctrl_v4_1_rfs.vhd:24126]
+INFO: [Synth 8-638] synthesizing module 'wrap_brst' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/33c1/hdl/axi_bram_ctrl_v4_1_rfs.vhd:12455]
+INFO: [Synth 8-256] done synthesizing module 'wrap_brst' (3#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/33c1/hdl/axi_bram_ctrl_v4_1_rfs.vhd:12455]
+INFO: [Synth 8-638] synthesizing module 'SRL_FIFO' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/33c1/hdl/axi_bram_ctrl_v4_1_rfs.vhd:133]
+INFO: [Synth 8-3491] module 'FDR' declared at '/home/software/Xilinx/Vivado/2021.1/scripts/rt/data/unisim_comp.v:27824' bound to instance 'Data_Exists_DFF' of component 'FDR' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/33c1/hdl/axi_bram_ctrl_v4_1_rfs.vhd:230]
+INFO: [Synth 8-6157] synthesizing module 'FDR' [/home/software/Xilinx/Vivado/2021.1/scripts/rt/data/unisim_comp.v:27824]
+INFO: [Synth 8-6155] done synthesizing module 'FDR' (4#1) [/home/software/Xilinx/Vivado/2021.1/scripts/rt/data/unisim_comp.v:27824]
+INFO: [Synth 8-3491] module 'MUXCY_L' declared at '/home/software/Xilinx/Vivado/2021.1/scripts/rt/data/unisim_comp.v:62941' bound to instance 'MUXCY_L_I' of component 'MUXCY_L' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/33c1/hdl/axi_bram_ctrl_v4_1_rfs.vhd:247]
+INFO: [Synth 8-6157] synthesizing module 'MUXCY_L' [/home/software/Xilinx/Vivado/2021.1/scripts/rt/data/unisim_comp.v:62941]
+INFO: [Synth 8-6155] done synthesizing module 'MUXCY_L' (5#1) [/home/software/Xilinx/Vivado/2021.1/scripts/rt/data/unisim_comp.v:62941]
+INFO: [Synth 8-3491] module 'XORCY' declared at '/home/software/Xilinx/Vivado/2021.1/scripts/rt/data/unisim_comp.v:105299' bound to instance 'XORCY_I' of component 'XORCY' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/33c1/hdl/axi_bram_ctrl_v4_1_rfs.vhd:254]
+INFO: [Synth 8-6157] synthesizing module 'XORCY' [/home/software/Xilinx/Vivado/2021.1/scripts/rt/data/unisim_comp.v:105299]
+INFO: [Synth 8-6155] done synthesizing module 'XORCY' (6#1) [/home/software/Xilinx/Vivado/2021.1/scripts/rt/data/unisim_comp.v:105299]
+INFO: [Synth 8-3491] module 'FDRE' declared at '/home/software/Xilinx/Vivado/2021.1/scripts/rt/data/unisim_comp.v:27837' bound to instance 'FDRE_I' of component 'FDRE' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/33c1/hdl/axi_bram_ctrl_v4_1_rfs.vhd:260]
+INFO: [Synth 8-6157] synthesizing module 'FDRE' [/home/software/Xilinx/Vivado/2021.1/scripts/rt/data/unisim_comp.v:27837]
+INFO: [Synth 8-6155] done synthesizing module 'FDRE' (7#1) [/home/software/Xilinx/Vivado/2021.1/scripts/rt/data/unisim_comp.v:27837]
+INFO: [Synth 8-3491] module 'MUXCY_L' declared at '/home/software/Xilinx/Vivado/2021.1/scripts/rt/data/unisim_comp.v:62941' bound to instance 'MUXCY_L_I' of component 'MUXCY_L' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/33c1/hdl/axi_bram_ctrl_v4_1_rfs.vhd:247]
+INFO: [Synth 8-3491] module 'XORCY' declared at '/home/software/Xilinx/Vivado/2021.1/scripts/rt/data/unisim_comp.v:105299' bound to instance 'XORCY_I' of component 'XORCY' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/33c1/hdl/axi_bram_ctrl_v4_1_rfs.vhd:254]
+INFO: [Synth 8-3491] module 'FDRE' declared at '/home/software/Xilinx/Vivado/2021.1/scripts/rt/data/unisim_comp.v:27837' bound to instance 'FDRE_I' of component 'FDRE' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/33c1/hdl/axi_bram_ctrl_v4_1_rfs.vhd:260]
+INFO: [Synth 8-3491] module 'MUXCY_L' declared at '/home/software/Xilinx/Vivado/2021.1/scripts/rt/data/unisim_comp.v:62941' bound to instance 'MUXCY_L_I' of component 'MUXCY_L' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/33c1/hdl/axi_bram_ctrl_v4_1_rfs.vhd:247]
+INFO: [Synth 8-3491] module 'XORCY' declared at '/home/software/Xilinx/Vivado/2021.1/scripts/rt/data/unisim_comp.v:105299' bound to instance 'XORCY_I' of component 'XORCY' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/33c1/hdl/axi_bram_ctrl_v4_1_rfs.vhd:254]
+INFO: [Synth 8-3491] module 'FDRE' declared at '/home/software/Xilinx/Vivado/2021.1/scripts/rt/data/unisim_comp.v:27837' bound to instance 'FDRE_I' of component 'FDRE' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/33c1/hdl/axi_bram_ctrl_v4_1_rfs.vhd:260]
+INFO: [Synth 8-3491] module 'MUXCY_L' declared at '/home/software/Xilinx/Vivado/2021.1/scripts/rt/data/unisim_comp.v:62941' bound to instance 'MUXCY_L_I' of component 'MUXCY_L' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/33c1/hdl/axi_bram_ctrl_v4_1_rfs.vhd:247]
+INFO: [Synth 8-3491] module 'XORCY' declared at '/home/software/Xilinx/Vivado/2021.1/scripts/rt/data/unisim_comp.v:105299' bound to instance 'XORCY_I' of component 'XORCY' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/33c1/hdl/axi_bram_ctrl_v4_1_rfs.vhd:254]
+INFO: [Synth 8-3491] module 'FDRE' declared at '/home/software/Xilinx/Vivado/2021.1/scripts/rt/data/unisim_comp.v:27837' bound to instance 'FDRE_I' of component 'FDRE' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/33c1/hdl/axi_bram_ctrl_v4_1_rfs.vhd:260]
+INFO: [Synth 8-3491] module 'SRL16E' declared at '/home/software/Xilinx/Vivado/2021.1/scripts/rt/data/unisim_comp.v:100961' bound to instance 'SRL16E_I' of component 'SRL16E' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/33c1/hdl/axi_bram_ctrl_v4_1_rfs.vhd:271]
+INFO: [Synth 8-6157] synthesizing module 'SRL16E' [/home/software/Xilinx/Vivado/2021.1/scripts/rt/data/unisim_comp.v:100961]
+INFO: [Synth 8-6155] done synthesizing module 'SRL16E' (8#1) [/home/software/Xilinx/Vivado/2021.1/scripts/rt/data/unisim_comp.v:100961]
+INFO: [Synth 8-256] done synthesizing module 'SRL_FIFO' (9#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/33c1/hdl/axi_bram_ctrl_v4_1_rfs.vhd:133]
+INFO: [Synth 8-256] done synthesizing module 'wr_chnl' (10#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/33c1/hdl/axi_bram_ctrl_v4_1_rfs.vhd:24159]
+WARNING: [Synth 8-6778] Component port with null array found, Will be ignored [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/33c1/hdl/axi_bram_ctrl_v4_1_rfs.vhd:30020]
+INFO: [Synth 8-638] synthesizing module 'rd_chnl' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/33c1/hdl/axi_bram_ctrl_v4_1_rfs.vhd:14746]
+INFO: [Synth 8-256] done synthesizing module 'rd_chnl' (11#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/33c1/hdl/axi_bram_ctrl_v4_1_rfs.vhd:14746]
+INFO: [Synth 8-256] done synthesizing module 'full_axi' (12#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/33c1/hdl/axi_bram_ctrl_v4_1_rfs.vhd:29280]
+INFO: [Synth 8-256] done synthesizing module 'axi_bram_ctrl_top' (13#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/33c1/hdl/axi_bram_ctrl_v4_1_rfs.vhd:30527]
+INFO: [Synth 8-256] done synthesizing module 'axi_bram_ctrl' (14#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/33c1/hdl/axi_bram_ctrl_v4_1_rfs.vhd:31528]
+INFO: [Synth 8-256] done synthesizing module 'system_axi_bram_ctrl_0_0' (15#1) [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/ip/system_axi_bram_ctrl_0_0/synth/system_axi_bram_ctrl_0_0.vhd:104]
+INFO: [Synth 8-638] synthesizing module 'system_axi_bram_ctrl_0_bram_0' [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/ip/system_axi_bram_ctrl_0_bram_0/synth/system_axi_bram_ctrl_0_bram_0.vhd:78]
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
+	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
+	Parameter C_INTERFACE_TYPE bound to: 0 - type: integer 
+	Parameter C_AXI_TYPE bound to: 1 - type: integer 
+	Parameter C_AXI_SLAVE_TYPE bound to: 0 - type: integer 
+	Parameter C_USE_BRAM_BLOCK bound to: 1 - type: integer 
+	Parameter C_ENABLE_32BIT_ADDRESS bound to: 1 - type: integer 
+	Parameter C_CTRL_ECC_ALGO bound to: NONE - type: string 
+	Parameter C_HAS_AXI_ID bound to: 0 - type: integer 
+	Parameter C_AXI_ID_WIDTH bound to: 4 - type: integer 
+	Parameter C_MEM_TYPE bound to: 2 - type: integer 
+	Parameter C_BYTE_SIZE bound to: 8 - type: integer 
+	Parameter C_ALGORITHM bound to: 1 - type: integer 
+	Parameter C_PRIM_TYPE bound to: 1 - type: integer 
+	Parameter C_LOAD_INIT_FILE bound to: 0 - type: integer 
+	Parameter C_INIT_FILE_NAME bound to: no_coe_file_loaded - type: string 
+	Parameter C_INIT_FILE bound to: NONE - type: string 
+	Parameter C_USE_DEFAULT_DATA bound to: 0 - type: integer 
+	Parameter C_DEFAULT_DATA bound to: 0 - type: string 
+	Parameter C_HAS_RSTA bound to: 1 - type: integer 
+	Parameter C_RST_PRIORITY_A bound to: CE - type: string 
+	Parameter C_RSTRAM_A bound to: 0 - type: integer 
+	Parameter C_INITA_VAL bound to: 0 - type: string 
+	Parameter C_HAS_ENA bound to: 1 - type: integer 
+	Parameter C_HAS_REGCEA bound to: 0 - type: integer 
+	Parameter C_USE_BYTE_WEA bound to: 1 - type: integer 
+	Parameter C_WEA_WIDTH bound to: 8 - type: integer 
+	Parameter C_WRITE_MODE_A bound to: WRITE_FIRST - type: string 
+	Parameter C_WRITE_WIDTH_A bound to: 64 - type: integer 
+	Parameter C_READ_WIDTH_A bound to: 64 - type: integer 
+	Parameter C_WRITE_DEPTH_A bound to: 8192 - type: integer 
+	Parameter C_READ_DEPTH_A bound to: 8192 - type: integer 
+	Parameter C_ADDRA_WIDTH bound to: 32 - type: integer 
+	Parameter C_HAS_RSTB bound to: 1 - type: integer 
+	Parameter C_RST_PRIORITY_B bound to: CE - type: string 
+	Parameter C_RSTRAM_B bound to: 0 - type: integer 
+	Parameter C_INITB_VAL bound to: 0 - type: string 
+	Parameter C_HAS_ENB bound to: 1 - type: integer 
+	Parameter C_HAS_REGCEB bound to: 0 - type: integer 
+	Parameter C_USE_BYTE_WEB bound to: 1 - type: integer 
+	Parameter C_WEB_WIDTH bound to: 8 - type: integer 
+	Parameter C_WRITE_MODE_B bound to: WRITE_FIRST - type: string 
+	Parameter C_WRITE_WIDTH_B bound to: 64 - type: integer 
+	Parameter C_READ_WIDTH_B bound to: 64 - type: integer 
+	Parameter C_WRITE_DEPTH_B bound to: 8192 - type: integer 
+	Parameter C_READ_DEPTH_B bound to: 8192 - type: integer 
+	Parameter C_ADDRB_WIDTH bound to: 32 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_HAS_MUX_OUTPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_MUX_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_MUX_PIPELINE_STAGES bound to: 0 - type: integer 
+	Parameter C_HAS_SOFTECC_INPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_SOFTECC_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_USE_SOFTECC bound to: 0 - type: integer 
+	Parameter C_USE_ECC bound to: 0 - type: integer 
+	Parameter C_EN_ECC_PIPE bound to: 0 - type: integer 
+	Parameter C_READ_LATENCY_A bound to: 1 - type: integer 
+	Parameter C_READ_LATENCY_B bound to: 1 - type: integer 
+	Parameter C_HAS_INJECTERR bound to: 0 - type: integer 
+	Parameter C_SIM_COLLISION_CHECK bound to: ALL - type: string 
+	Parameter C_COMMON_CLK bound to: 0 - type: integer 
+	Parameter C_DISABLE_WARN_BHV_COLL bound to: 0 - type: integer 
+	Parameter C_EN_SLEEP_PIN bound to: 0 - type: integer 
+	Parameter C_USE_URAM bound to: 0 - type: integer 
+	Parameter C_EN_RDADDRA_CHG bound to: 0 - type: integer 
+	Parameter C_EN_RDADDRB_CHG bound to: 0 - type: integer 
+	Parameter C_EN_DEEPSLEEP_PIN bound to: 0 - type: integer 
+	Parameter C_EN_SHUTDOWN_PIN bound to: 0 - type: integer 
+	Parameter C_EN_SAFETY_CKT bound to: 0 - type: integer 
+	Parameter C_DISABLE_WARN_BHV_RANGE bound to: 0 - type: integer 
+	Parameter C_COUNT_36K_BRAM bound to: 16 - type: string 
+	Parameter C_COUNT_18K_BRAM bound to: 0 - type: string 
+	Parameter C_EST_POWER_SUMMARY bound to: Estimated Power for IP     :     40.776 mW - type: string 
+INFO: [Synth 8-3491] module 'blk_mem_gen_v8_4_4' declared at '/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/2985/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd:195321' bound to instance 'U0' of component 'blk_mem_gen_v8_4_4' [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/ip/system_axi_bram_ctrl_0_bram_0/synth/system_axi_bram_ctrl_0_bram_0.vhd:253]
+INFO: [Synth 8-256] done synthesizing module 'system_axi_bram_ctrl_0_bram_0' (26#1) [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/ip/system_axi_bram_ctrl_0_bram_0/synth/system_axi_bram_ctrl_0_bram_0.vhd:78]
+INFO: [Synth 8-638] synthesizing module 'system_axi_bram_ctrl_1_0' [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/ip/system_axi_bram_ctrl_1_0/synth/system_axi_bram_ctrl_1_0.vhd:104]
+	Parameter C_BRAM_INST_MODE bound to: EXTERNAL - type: string 
+	Parameter C_MEMORY_DEPTH bound to: 8192 - type: integer 
+	Parameter C_BRAM_ADDR_WIDTH bound to: 13 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 16 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_S_AXI_ID_WIDTH bound to: 1 - type: integer 
+	Parameter C_S_AXI_PROTOCOL bound to: AXI4 - type: string 
+	Parameter C_S_AXI_SUPPORTS_NARROW_BURST bound to: 0 - type: integer 
+	Parameter C_SINGLE_PORT_BRAM bound to: 1 - type: integer 
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_READ_LATENCY bound to: 1 - type: integer 
+	Parameter C_RD_CMD_OPTIMIZATION bound to: 0 - type: integer 
+	Parameter C_S_AXI_CTRL_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_CTRL_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_ECC bound to: 0 - type: integer 
+	Parameter C_ECC_TYPE bound to: 0 - type: integer 
+	Parameter C_FAULT_INJECT bound to: 0 - type: integer 
+	Parameter C_ECC_ONOFF_RESET_VALUE bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'axi_bram_ctrl' declared at '/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/33c1/hdl/axi_bram_ctrl_v4_1_rfs.vhd:31357' bound to instance 'U0' of component 'axi_bram_ctrl' [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/ip/system_axi_bram_ctrl_1_0/synth/system_axi_bram_ctrl_1_0.vhd:255]
+INFO: [Synth 8-256] done synthesizing module 'system_axi_bram_ctrl_1_0' (27#1) [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/ip/system_axi_bram_ctrl_1_0/synth/system_axi_bram_ctrl_1_0.vhd:104]
+INFO: [Synth 8-638] synthesizing module 'system_axi_cdma_0_0' [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/ip/system_axi_cdma_0_0/synth/system_axi_cdma_0_0.vhd:114]
+	Parameter C_S_AXI_LITE_ADDR_WIDTH bound to: 6 - type: integer 
+	Parameter C_S_AXI_LITE_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_AXI_LITE_IS_ASYNC bound to: 0 - type: integer 
+	Parameter C_M_AXI_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_DATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_M_AXI_MAX_BURST_LEN bound to: 8 - type: integer 
+	Parameter C_INCLUDE_DRE bound to: 0 - type: integer 
+	Parameter C_USE_DATAMOVER_LITE bound to: 0 - type: integer 
+	Parameter C_READ_ADDR_PIPE_DEPTH bound to: 4 - type: integer 
+	Parameter C_WRITE_ADDR_PIPE_DEPTH bound to: 4 - type: integer 
+	Parameter C_INCLUDE_SF bound to: 0 - type: integer 
+	Parameter C_INCLUDE_SG bound to: 0 - type: integer 
+	Parameter C_M_AXI_SG_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_SG_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_DLYTMR_RESOLUTION bound to: 256 - type: integer 
+	Parameter C_FAMILY bound to: zynq - type: string 
+INFO: [Synth 8-3491] module 'axi_cdma' declared at '/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/c37d/hdl/axi_cdma_v4_1_vh_rfs.vhd:15027' bound to instance 'U0' of component 'axi_cdma' [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/ip/system_axi_cdma_0_0/synth/system_axi_cdma_0_0.vhd:285]
+INFO: [Synth 8-638] synthesizing module 'axi_cdma' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/c37d/hdl/axi_cdma_v4_1_vh_rfs.vhd:15327]
+INFO: [Synth 8-638] synthesizing module 'axi_cdma_simple_wrap' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/c37d/hdl/axi_cdma_v4_1_vh_rfs.vhd:8729]
+INFO: [Synth 8-638] synthesizing module 'axi_cdma_reset' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/c37d/hdl/axi_cdma_v4_1_vh_rfs.vhd:984]
+INFO: [Synth 8-638] synthesizing module 'axi_cdma_pulse_gen' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/c37d/hdl/axi_cdma_v4_1_vh_rfs.vhd:413]
+INFO: [Synth 8-256] done synthesizing module 'axi_cdma_pulse_gen' (28#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/c37d/hdl/axi_cdma_v4_1_vh_rfs.vhd:413]
+INFO: [Synth 8-638] synthesizing module 'axi_cdma_pulse_gen__parameterized0' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/c37d/hdl/axi_cdma_v4_1_vh_rfs.vhd:413]
+INFO: [Synth 8-256] done synthesizing module 'axi_cdma_pulse_gen__parameterized0' (28#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/c37d/hdl/axi_cdma_v4_1_vh_rfs.vhd:413]
+INFO: [Synth 8-638] synthesizing module 'axi_cdma_pulse_gen__parameterized1' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/c37d/hdl/axi_cdma_v4_1_vh_rfs.vhd:413]
+INFO: [Synth 8-256] done synthesizing module 'axi_cdma_pulse_gen__parameterized1' (28#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/c37d/hdl/axi_cdma_v4_1_vh_rfs.vhd:413]
+INFO: [Synth 8-256] done synthesizing module 'axi_cdma_reset' (29#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/c37d/hdl/axi_cdma_v4_1_vh_rfs.vhd:984]
+INFO: [Synth 8-638] synthesizing module 'axi_cdma_reg_module' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/c37d/hdl/axi_cdma_v4_1_vh_rfs.vhd:5316]
+INFO: [Synth 8-638] synthesizing module 'axi_cdma_lite_if' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/c37d/hdl/axi_cdma_v4_1_vh_rfs.vhd:2173]
+INFO: [Synth 8-256] done synthesizing module 'axi_cdma_lite_if' (30#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/c37d/hdl/axi_cdma_v4_1_vh_rfs.vhd:2173]
+INFO: [Synth 8-638] synthesizing module 'axi_cdma_register' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/c37d/hdl/axi_cdma_v4_1_vh_rfs.vhd:3810]
+INFO: [Synth 8-256] done synthesizing module 'axi_cdma_register' (31#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/c37d/hdl/axi_cdma_v4_1_vh_rfs.vhd:3810]
+INFO: [Synth 8-256] done synthesizing module 'axi_cdma_reg_module' (32#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/c37d/hdl/axi_cdma_v4_1_vh_rfs.vhd:5316]
+INFO: [Synth 8-638] synthesizing module 'axi_cdma_simple_cntlr' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/c37d/hdl/axi_cdma_v4_1_vh_rfs.vhd:7706]
+INFO: [Synth 8-226] default block is never used [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/c37d/hdl/axi_cdma_v4_1_vh_rfs.vhd:8247]
+INFO: [Synth 8-256] done synthesizing module 'axi_cdma_simple_cntlr' (33#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/c37d/hdl/axi_cdma_v4_1_vh_rfs.vhd:7706]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:55439]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_mm2s_full_wrap' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:53572]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_reset' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:153]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_reset' (34#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:153]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_cmd_status' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:2698]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo' (35#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized0' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized0' (35#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_cmd_status' (36#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:2698]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_rd_status_cntl' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:13746]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_rd_status_cntl' (37#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:13746]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_pcc' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:7416]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_strb_gen2' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:4342]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_strb_gen2' (38#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:4342]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_strb_gen2__parameterized0' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:4342]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_strb_gen2__parameterized0' (38#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:4342]
+INFO: [Synth 8-226] default block is never used [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:9490]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_pcc' (39#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:7416]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_addr_cntl' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:10000]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized1' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_f' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_rbu_f' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-638] synthesizing module 'cntr_incr_decr_addn_f' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:143]
+INFO: [Synth 8-256] done synthesizing module 'cntr_incr_decr_addn_f' (40#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:143]
+INFO: [Synth 8-638] synthesizing module 'dynshreg_f' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'dynshreg_f' (41#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_rbu_f' (42#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_f' (43#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized1' (43#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_addr_cntl' (44#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:10000]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_rddata_cntl' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:12185]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_rdmux' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:10681]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_rdmux' (45#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:10681]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized2' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_f__parameterized0' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_rbu_f__parameterized0' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-638] synthesizing module 'dynshreg_f__parameterized0' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'dynshreg_f__parameterized0' (45#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_rbu_f__parameterized0' (45#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_f__parameterized0' (45#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized2' (45#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_rddata_cntl' (46#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:12185]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_mm2s_full_wrap' (47#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:53572]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_s2mm_full_wrap' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:49997]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_wr_status_cntl' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:17704]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized3' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_f__parameterized1' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_rbu_f__parameterized1' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-638] synthesizing module 'cntr_incr_decr_addn_f__parameterized0' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:143]
+INFO: [Synth 8-256] done synthesizing module 'cntr_incr_decr_addn_f__parameterized0' (47#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:143]
+INFO: [Synth 8-638] synthesizing module 'dynshreg_f__parameterized1' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'dynshreg_f__parameterized1' (47#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_rbu_f__parameterized1' (47#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_f__parameterized1' (47#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized3' (47#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized4' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_f__parameterized2' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_rbu_f__parameterized2' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-638] synthesizing module 'dynshreg_f__parameterized2' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'dynshreg_f__parameterized2' (47#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_rbu_f__parameterized2' (47#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_f__parameterized2' (47#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized4' (47#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_wr_status_cntl' (48#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:17704]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_pcc__parameterized0' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:7416]
+INFO: [Synth 8-226] default block is never used [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:9490]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_pcc__parameterized0' (48#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:7416]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_addr_cntl__parameterized0' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:10000]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_addr_cntl__parameterized0' (48#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:10000]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_wrdata_cntl' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:15674]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized5' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_f__parameterized3' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_rbu_f__parameterized3' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-638] synthesizing module 'dynshreg_f__parameterized3' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'dynshreg_f__parameterized3' (48#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_rbu_f__parameterized3' (48#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_f__parameterized3' (48#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized5' (48#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_wrdata_cntl' (49#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:15674]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_skid2mm_buf' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:18998]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_wr_demux' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:14117]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_wr_demux' (50#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:14117]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_skid2mm_buf' (51#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:18998]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_s2mm_full_wrap' (52#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:49997]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover' (53#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:55439]
+INFO: [Synth 8-256] done synthesizing module 'axi_cdma_simple_wrap' (54#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/c37d/hdl/axi_cdma_v4_1_vh_rfs.vhd:8729]
+INFO: [Synth 8-256] done synthesizing module 'axi_cdma' (55#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/c37d/hdl/axi_cdma_v4_1_vh_rfs.vhd:15327]
+INFO: [Synth 8-256] done synthesizing module 'system_axi_cdma_0_0' (56#1) [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/ip/system_axi_cdma_0_0/synth/system_axi_cdma_0_0.vhd:114]
+WARNING: [Synth 8-7071] port 'cdma_tvect_out' of module 'system_axi_cdma_0_0' is unconnected for instance 'axi_cdma_0' [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/synth/system.v:2455]
+WARNING: [Synth 8-7023] instance 'axi_cdma_0' of module 'system_axi_cdma_0_0' has 50 connections declared, but only 49 given [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/synth/system.v:2455]
+INFO: [Synth 8-6157] synthesizing module 'system_axi_mem_intercon_0' [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/synth/system.v:2990]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_1P403ZT' [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/synth/system.v:1207]
+INFO: [Synth 8-6157] synthesizing module 'system_auto_pc_0' [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/ip/system_auto_pc_0/synth/system_auto_pc_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_24_axi_protocol_converter' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/6e0d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:4808]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_24_axi_protocol_converter' (57#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/6e0d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:4808]
+INFO: [Synth 8-6155] done synthesizing module 'system_auto_pc_0' (58#1) [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/ip/system_auto_pc_0/synth/system_auto_pc_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'system_auto_us_0' [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/ip/system_auto_us_0/synth/system_auto_us_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'axi_dwidth_converter_v2_1_24_top' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/3d13/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:14462]
+INFO: [Synth 8-6157] synthesizing module 'axi_dwidth_converter_v2_1_24_axi_upsizer' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/3d13/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:7038]
+INFO: [Synth 8-6157] synthesizing module 'axi_dwidth_converter_v2_1_24_w_upsizer' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/3d13/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:5563]
+INFO: [Synth 8-6155] done synthesizing module 'axi_dwidth_converter_v2_1_24_w_upsizer' (59#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/3d13/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:5563]
+INFO: [Synth 8-6157] synthesizing module 'axi_dwidth_converter_v2_1_24_a_upsizer' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/3d13/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:3603]
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_command_fifo' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:655]
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_command_fifo' (60#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:655]
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_command_fifo__parameterized0' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:655]
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_command_fifo__parameterized0' (60#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:655]
+INFO: [Synth 8-6155] done synthesizing module 'axi_dwidth_converter_v2_1_24_a_upsizer' (61#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/3d13/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:3603]
+INFO: [Synth 8-6157] synthesizing module 'axi_dwidth_converter_v2_1_24_r_upsizer' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/3d13/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:4653]
+INFO: [Synth 8-6155] done synthesizing module 'axi_dwidth_converter_v2_1_24_r_upsizer' (62#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/3d13/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:4653]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_24_axi_register_slice' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:3726]
+INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_axi2vector' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:60]
+INFO: [Synth 8-6155] done synthesizing module 'axi_infrastructure_v1_1_0_axi2vector' (63#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:60]
+INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_vector2axi' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:474]
+INFO: [Synth 8-6155] done synthesizing module 'axi_infrastructure_v1_1_0_vector2axi' (64#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:474]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_24_axic_register_slice' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1498]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_24_axic_register_slice' (65#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1498]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_24_axic_register_slice__parameterized0' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1498]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_24_axic_register_slice__parameterized0' (65#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1498]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_24_axic_register_slice__parameterized1' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1498]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_24_axic_register_slice__parameterized1' (65#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1498]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_24_axic_register_slice__parameterized2' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1498]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_24_axic_register_slice__parameterized2' (65#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1498]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_24_axi_register_slice' (66#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:3726]
+WARNING: [Synth 8-7071] port 'aclk2x' of module 'axi_register_slice_v2_1_24_axi_register_slice' is unconnected for instance 'mi_register_slice_inst' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/3d13/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:8475]
+WARNING: [Synth 8-7023] instance 'mi_register_slice_inst' of module 'axi_register_slice_v2_1_24_axi_register_slice' has 93 connections declared, but only 92 given [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/3d13/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:8475]
+INFO: [Synth 8-6157] synthesizing module 'axi_dwidth_converter_v2_1_24_a_upsizer__parameterized0' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/3d13/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:3603]
+INFO: [Synth 8-6155] done synthesizing module 'axi_dwidth_converter_v2_1_24_a_upsizer__parameterized0' (66#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/3d13/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:3603]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_24_axi_register_slice__parameterized0' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:3726]
+INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_axi2vector__parameterized0' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:60]
+INFO: [Synth 8-6155] done synthesizing module 'axi_infrastructure_v1_1_0_axi2vector__parameterized0' (66#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:60]
+INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_vector2axi__parameterized0' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:474]
+INFO: [Synth 8-6155] done synthesizing module 'axi_infrastructure_v1_1_0_vector2axi__parameterized0' (66#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:474]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_24_axic_register_slice__parameterized3' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1498]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_24_axic_register_slice__parameterized3' (66#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1498]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_24_axic_register_slice__parameterized4' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1498]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_24_axic_register_slice__parameterized4' (66#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1498]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_24_axic_register_slice__parameterized5' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1498]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_24_axic_register_slice__parameterized5' (66#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1498]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_24_axic_register_slice__parameterized6' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1498]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_24_axic_register_slice__parameterized6' (66#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1498]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_24_axi_register_slice__parameterized0' (66#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:3726]
+WARNING: [Synth 8-7071] port 'aclk2x' of module 'axi_register_slice_v2_1_24_axi_register_slice' is unconnected for instance 'si_register_slice_inst' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/3d13/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:7379]
+WARNING: [Synth 8-7023] instance 'si_register_slice_inst' of module 'axi_register_slice_v2_1_24_axi_register_slice' has 93 connections declared, but only 92 given [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/3d13/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:7379]
+INFO: [Synth 8-6155] done synthesizing module 'axi_dwidth_converter_v2_1_24_axi_upsizer' (67#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/3d13/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:7038]
+INFO: [Synth 8-6155] done synthesizing module 'axi_dwidth_converter_v2_1_24_top' (68#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/3d13/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:14462]
+INFO: [Synth 8-6155] done synthesizing module 'system_auto_us_0' (69#1) [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/ip/system_auto_us_0/synth/system_auto_us_0.v:58]
+WARNING: [Synth 8-7071] port 'm_axi_awregion' of module 'system_auto_us_0' is unconnected for instance 'auto_us' [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/synth/system.v:1617]
+WARNING: [Synth 8-7071] port 'm_axi_awqos' of module 'system_auto_us_0' is unconnected for instance 'auto_us' [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/synth/system.v:1617]
+WARNING: [Synth 8-7071] port 'm_axi_arregion' of module 'system_auto_us_0' is unconnected for instance 'auto_us' [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/synth/system.v:1617]
+WARNING: [Synth 8-7071] port 'm_axi_arqos' of module 'system_auto_us_0' is unconnected for instance 'auto_us' [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/synth/system.v:1617]
+WARNING: [Synth 8-7023] instance 'auto_us' of module 'system_auto_us_0' has 76 connections declared, but only 72 given [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/synth/system.v:1617]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_1P403ZT' (70#1) [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/synth/system.v:1207]
+INFO: [Synth 8-6155] done synthesizing module 'system_axi_mem_intercon_0' (71#1) [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/synth/system.v:2990]
+INFO: [Synth 8-6157] synthesizing module 'system_axi_mem_intercon_1_0' [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/synth/system.v:3365]
+INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_13ZR4P2' [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/synth/system.v:12]
+INFO: [Synth 8-6157] synthesizing module 'system_auto_pc_2' [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/ip/system_auto_pc_2/synth/system_auto_pc_2.v:58]
+INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_24_axi_protocol_converter__parameterized0' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/6e0d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:4808]
+INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_24_axi3_conv' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/6e0d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:954]
+INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_24_b_downsizer' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/6e0d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2276]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_24_b_downsizer' (72#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/6e0d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2276]
+INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_24_a_axi3_conv' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/6e0d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:62]
+INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_23_axic_fifo' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/94ec/hdl/axi_data_fifo_v2_1_vl_rfs.v:64]
+INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_23_fifo_gen' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/94ec/hdl/axi_data_fifo_v2_1_vl_rfs.v:168]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_async_rst' [/home/software/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1175]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_async_rst' (73#1) [/home/software/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1175]
+INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_23_fifo_gen' (91#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/94ec/hdl/axi_data_fifo_v2_1_vl_rfs.v:168]
+INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_23_axic_fifo' (92#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/94ec/hdl/axi_data_fifo_v2_1_vl_rfs.v:64]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_24_a_axi3_conv' (93#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/6e0d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:62]
+INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_24_w_axi3_conv' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/6e0d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2004]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_24_w_axi3_conv' (94#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/6e0d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2004]
+INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_24_a_axi3_conv__parameterized0' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/6e0d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:62]
+INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_23_axic_fifo__parameterized0' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/94ec/hdl/axi_data_fifo_v2_1_vl_rfs.v:64]
+INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_23_fifo_gen__parameterized0' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/94ec/hdl/axi_data_fifo_v2_1_vl_rfs.v:168]
+INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_23_fifo_gen__parameterized0' (94#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/94ec/hdl/axi_data_fifo_v2_1_vl_rfs.v:168]
+INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_23_axic_fifo__parameterized0' (94#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/94ec/hdl/axi_data_fifo_v2_1_vl_rfs.v:64]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_24_a_axi3_conv__parameterized0' (94#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/6e0d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:62]
+INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_24_r_axi3_conv' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/6e0d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:1789]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_24_r_axi3_conv' (95#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/6e0d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:1789]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_24_axi3_conv' (96#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/6e0d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:954]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_24_axi_protocol_converter__parameterized0' (96#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/6e0d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:4808]
+INFO: [Synth 8-6155] done synthesizing module 'system_auto_pc_2' (97#1) [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/ip/system_auto_pc_2/synth/system_auto_pc_2.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_13ZR4P2' (98#1) [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/synth/system.v:12]
+INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_HA9E6V' [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/synth/system.v:636]
+INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_HA9E6V' (99#1) [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/synth/system.v:636]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_1AIV7DJ' [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/synth/system.v:991]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_1AIV7DJ' (100#1) [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/synth/system.v:991]
+INFO: [Synth 8-6157] synthesizing module 'system_xbar_1' [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/ip/system_xbar_1/synth/system_xbar_1.v:59]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_25_axi_crossbar' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:4884]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_25_crossbar' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:2239]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_25_si_transactor' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:3800]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_25_addr_decoder' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:794]
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_comparator_static' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2133]
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_carry_and' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:62]
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_carry_and' (101#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:62]
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_comparator_static' (102#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2133]
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_comparator_static__parameterized0' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2133]
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_comparator_static__parameterized0' (102#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2133]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_25_addr_decoder' (103#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:794]
+INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_23_axic_srl_fifo' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/94ec/hdl/axi_data_fifo_v2_1_vl_rfs.v:698]
+INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_23_ndeep_srl' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/94ec/hdl/axi_data_fifo_v2_1_vl_rfs.v:1135]
+INFO: [Synth 8-6157] synthesizing module 'SRLC32E' [/home/software/Xilinx/Vivado/2021.1/scripts/rt/data/unisim_comp.v:101111]
+INFO: [Synth 8-6155] done synthesizing module 'SRLC32E' (104#1) [/home/software/Xilinx/Vivado/2021.1/scripts/rt/data/unisim_comp.v:101111]
+INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_23_ndeep_srl' (105#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/94ec/hdl/axi_data_fifo_v2_1_vl_rfs.v:1135]
+INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_23_axic_srl_fifo' (106#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/94ec/hdl/axi_data_fifo_v2_1_vl_rfs.v:698]
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_mux_enc' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_mux_enc' (107#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_25_si_transactor' (108#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:3800]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_25_si_transactor__parameterized0' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:3800]
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized0' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized0' (108#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_25_si_transactor__parameterized0' (108#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:3800]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_25_splitter' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:4461]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_25_splitter' (109#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:4461]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_25_wdata_router' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:4736]
+INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_23_axic_reg_srl_fifo' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/94ec/hdl/axi_data_fifo_v2_1_vl_rfs.v:889]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/94ec/hdl/axi_data_fifo_v2_1_vl_rfs.v:986]
+INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_23_axic_reg_srl_fifo' (110#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/94ec/hdl/axi_data_fifo_v2_1_vl_rfs.v:889]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_25_wdata_router' (111#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:4736]
+INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_23_axic_srl_fifo__parameterized0' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/94ec/hdl/axi_data_fifo_v2_1_vl_rfs.v:698]
+INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_23_ndeep_srl__parameterized0' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/94ec/hdl/axi_data_fifo_v2_1_vl_rfs.v:1135]
+INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_23_ndeep_srl__parameterized0' (111#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/94ec/hdl/axi_data_fifo_v2_1_vl_rfs.v:1135]
+INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_23_axic_srl_fifo__parameterized0' (111#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/94ec/hdl/axi_data_fifo_v2_1_vl_rfs.v:698]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_25_wdata_mux' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:4561]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_25_wdata_mux' (112#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:4561]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_24_axi_register_slice__parameterized1' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:3726]
+INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_axi2vector__parameterized1' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:60]
+INFO: [Synth 8-6155] done synthesizing module 'axi_infrastructure_v1_1_0_axi2vector__parameterized1' (112#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:60]
+INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_vector2axi__parameterized1' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:474]
+INFO: [Synth 8-6155] done synthesizing module 'axi_infrastructure_v1_1_0_vector2axi__parameterized1' (112#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:474]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_24_axic_register_slice__parameterized7' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1498]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_24_axic_register_slice__parameterized7' (112#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1498]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_24_axic_register_slice__parameterized8' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1498]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_24_axic_register_slice__parameterized8' (112#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1498]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_24_axi_register_slice__parameterized1' (112#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:3726]
+WARNING: [Synth 8-7071] port 'aclk2x' of module 'axi_register_slice_v2_1_24_axi_register_slice' is unconnected for instance 'reg_slice_mi' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:3122]
+WARNING: [Synth 8-7023] instance 'reg_slice_mi' of module 'axi_register_slice_v2_1_24_axi_register_slice' has 93 connections declared, but only 92 given [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:3122]
+INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_23_axic_srl_fifo__parameterized1' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/94ec/hdl/axi_data_fifo_v2_1_vl_rfs.v:698]
+INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_23_axic_srl_fifo__parameterized1' (112#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/94ec/hdl/axi_data_fifo_v2_1_vl_rfs.v:698]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_25_wdata_mux__parameterized0' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:4561]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_25_wdata_mux__parameterized0' (112#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:4561]
+WARNING: [Synth 8-7071] port 'aclk2x' of module 'axi_register_slice_v2_1_24_axi_register_slice' is unconnected for instance 'reg_slice_mi' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:3122]
+WARNING: [Synth 8-7023] instance 'reg_slice_mi' of module 'axi_register_slice_v2_1_24_axi_register_slice' has 93 connections declared, but only 92 given [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:3122]
+INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_23_axic_srl_fifo__parameterized2' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/94ec/hdl/axi_data_fifo_v2_1_vl_rfs.v:698]
+INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_23_axic_srl_fifo__parameterized2' (112#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/94ec/hdl/axi_data_fifo_v2_1_vl_rfs.v:698]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_25_wdata_mux__parameterized1' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:4561]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_25_wdata_mux__parameterized1' (112#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:4561]
+WARNING: [Synth 8-7071] port 'aclk2x' of module 'axi_register_slice_v2_1_24_axi_register_slice' is unconnected for instance 'reg_slice_mi' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:3122]
+WARNING: [Synth 8-7023] instance 'reg_slice_mi' of module 'axi_register_slice_v2_1_24_axi_register_slice' has 93 connections declared, but only 92 given [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:3122]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_25_decerr_slave' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:3501]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:3633]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_25_decerr_slave' (113#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:3501]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_25_addr_arbiter' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:423]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_25_addr_arbiter' (114#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:423]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_25_crossbar' (115#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:2239]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_25_axi_crossbar' (116#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v:4884]
+INFO: [Synth 8-6155] done synthesizing module 'system_xbar_1' (117#1) [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/ip/system_xbar_1/synth/system_xbar_1.v:59]
+WARNING: [Synth 8-689] width (4) of port connection 'm_axi_arqos' does not match port width (8) of module 'system_xbar_1' [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/synth/system.v:4067]
+WARNING: [Synth 8-689] width (4) of port connection 'm_axi_arregion' does not match port width (8) of module 'system_xbar_1' [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/synth/system.v:4069]
+WARNING: [Synth 8-689] width (4) of port connection 'm_axi_awqos' does not match port width (8) of module 'system_xbar_1' [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/synth/system.v:4078]
+WARNING: [Synth 8-689] width (4) of port connection 'm_axi_awregion' does not match port width (8) of module 'system_xbar_1' [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/synth/system.v:4080]
+INFO: [Synth 8-6155] done synthesizing module 'system_axi_mem_intercon_1_0' (118#1) [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/synth/system.v:3365]
+INFO: [Synth 8-638] synthesizing module 'system_axi_gpio_0_1' [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/ip/system_axi_gpio_0_1/synth/system_axi_gpio_0_1.vhd:84]
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 9 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_GPIO_WIDTH bound to: 4 - type: integer 
+	Parameter C_GPIO2_WIDTH bound to: 32 - type: integer 
+	Parameter C_ALL_INPUTS bound to: 0 - type: integer 
+	Parameter C_ALL_INPUTS_2 bound to: 0 - type: integer 
+	Parameter C_ALL_OUTPUTS bound to: 1 - type: integer 
+	Parameter C_ALL_OUTPUTS_2 bound to: 0 - type: integer 
+	Parameter C_INTERRUPT_PRESENT bound to: 0 - type: integer 
+	Parameter C_DOUT_DEFAULT bound to: 32'b00000000000000000000000000000000 
+	Parameter C_TRI_DEFAULT bound to: 32'b11111111111111111111111111111111 
+	Parameter C_IS_DUAL bound to: 0 - type: integer 
+	Parameter C_DOUT_DEFAULT_2 bound to: 32'b00000000000000000000000000000000 
+	Parameter C_TRI_DEFAULT_2 bound to: 32'b11111111111111111111111111111111 
+INFO: [Synth 8-3491] module 'axi_gpio' declared at '/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/65b4/hdl/axi_gpio_v2_0_vh_rfs.vhd:1265' bound to instance 'U0' of component 'axi_gpio' [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/ip/system_axi_gpio_0_1/synth/system_axi_gpio_0_1.vhd:168]
+INFO: [Synth 8-638] synthesizing module 'axi_gpio' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/65b4/hdl/axi_gpio_v2_0_vh_rfs.vhd:1351]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2948]
+INFO: [Synth 8-638] synthesizing module 'slave_attachment' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2341]
+INFO: [Synth 8-638] synthesizing module 'address_decoder' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1775]
+INFO: [Synth 8-638] synthesizing module 'pselect_f' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f' (119#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized0' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized0' (119#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized1' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized1' (119#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized2' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized2' (119#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'address_decoder' (120#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1775]
+INFO: [Synth 8-226] default block is never used [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2550]
+INFO: [Synth 8-256] done synthesizing module 'slave_attachment' (121#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2341]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif' (122#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2948]
+INFO: [Synth 8-638] synthesizing module 'GPIO_Core' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/65b4/hdl/axi_gpio_v2_0_vh_rfs.vhd:178]
+INFO: [Synth 8-226] default block is never used [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/65b4/hdl/axi_gpio_v2_0_vh_rfs.vhd:443]
+INFO: [Synth 8-638] synthesizing module 'cdc_sync' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:736]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:736]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:736]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:736]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:772]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:772]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:772]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:772]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:788]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:788]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:788]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:788]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4' to cell 'FDR' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:804]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4' to cell 'FDR' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:804]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4' to cell 'FDR' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:804]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4' to cell 'FDR' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:804]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5' to cell 'FDR' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:821]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5' to cell 'FDR' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:821]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5' to cell 'FDR' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:821]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5' to cell 'FDR' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:821]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6' to cell 'FDR' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:837]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6' to cell 'FDR' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:837]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6' to cell 'FDR' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:837]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6' to cell 'FDR' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:837]
+INFO: [Synth 8-256] done synthesizing module 'cdc_sync' (123#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-256] done synthesizing module 'GPIO_Core' (124#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/65b4/hdl/axi_gpio_v2_0_vh_rfs.vhd:178]
+INFO: [Synth 8-256] done synthesizing module 'axi_gpio' (125#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/65b4/hdl/axi_gpio_v2_0_vh_rfs.vhd:1351]
+INFO: [Synth 8-256] done synthesizing module 'system_axi_gpio_0_1' (126#1) [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/ip/system_axi_gpio_0_1/synth/system_axi_gpio_0_1.vhd:84]
+INFO: [Synth 8-6157] synthesizing module 'system_processing_system7_0_0' [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/synth/system_processing_system7_0_0.v:60]
+INFO: [Synth 8-6157] synthesizing module 'processing_system7_v5_5_processing_system7' [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:161]
+INFO: [Synth 8-6157] synthesizing module 'BUFG' [/home/software/Xilinx/Vivado/2021.1/scripts/rt/data/unisim_comp.v:1083]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG' (127#1) [/home/software/Xilinx/Vivado/2021.1/scripts/rt/data/unisim_comp.v:1083]
+INFO: [Synth 8-6157] synthesizing module 'BIBUF' [/home/software/Xilinx/Vivado/2021.1/scripts/rt/data/unisim_comp.v:730]
+INFO: [Synth 8-6155] done synthesizing module 'BIBUF' (128#1) [/home/software/Xilinx/Vivado/2021.1/scripts/rt/data/unisim_comp.v:730]
+INFO: [Synth 8-6157] synthesizing module 'PS7' [/home/software/Xilinx/Vivado/2021.1/scripts/rt/data/unisim_comp.v:84961]
+INFO: [Synth 8-6155] done synthesizing module 'PS7' (129#1) [/home/software/Xilinx/Vivado/2021.1/scripts/rt/data/unisim_comp.v:84961]
+INFO: [Synth 8-6155] done synthesizing module 'processing_system7_v5_5_processing_system7' (130#1) [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:161]
+WARNING: [Synth 8-7071] port 'M_AXI_GP0_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/synth/system_processing_system7_0_0.v:589]
+WARNING: [Synth 8-7071] port 'M_AXI_GP1_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/synth/system_processing_system7_0_0.v:589]
+WARNING: [Synth 8-7071] port 'S_AXI_GP0_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/synth/system_processing_system7_0_0.v:589]
+WARNING: [Synth 8-7071] port 'S_AXI_GP1_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/synth/system_processing_system7_0_0.v:589]
+WARNING: [Synth 8-7071] port 'S_AXI_ACP_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/synth/system_processing_system7_0_0.v:589]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/synth/system_processing_system7_0_0.v:589]
+WARNING: [Synth 8-7071] port 'S_AXI_HP1_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/synth/system_processing_system7_0_0.v:589]
+WARNING: [Synth 8-7071] port 'S_AXI_HP2_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/synth/system_processing_system7_0_0.v:589]
+WARNING: [Synth 8-7071] port 'S_AXI_HP3_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/synth/system_processing_system7_0_0.v:589]
+WARNING: [Synth 8-7071] port 'DMA0_RSTN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/synth/system_processing_system7_0_0.v:589]
+WARNING: [Synth 8-7071] port 'DMA1_RSTN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/synth/system_processing_system7_0_0.v:589]
+WARNING: [Synth 8-7071] port 'DMA2_RSTN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/synth/system_processing_system7_0_0.v:589]
+WARNING: [Synth 8-7071] port 'DMA3_RSTN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/synth/system_processing_system7_0_0.v:589]
+WARNING: [Synth 8-7023] instance 'inst' of module 'processing_system7_v5_5_processing_system7' has 685 connections declared, but only 672 given [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/synth/system_processing_system7_0_0.v:589]
+INFO: [Synth 8-6155] done synthesizing module 'system_processing_system7_0_0' (131#1) [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/synth/system_processing_system7_0_0.v:60]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_BID' of module 'system_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/synth/system.v:2706]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_RID' of module 'system_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/synth/system.v:2706]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_RCOUNT' of module 'system_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/synth/system.v:2706]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_WCOUNT' of module 'system_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/synth/system.v:2706]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_RACOUNT' of module 'system_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/synth/system.v:2706]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_WACOUNT' of module 'system_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/synth/system.v:2706]
+WARNING: [Synth 8-7023] instance 'processing_system7_0' of module 'system_processing_system7_0_0' has 151 connections declared, but only 145 given [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/synth/system.v:2706]
+INFO: [Synth 8-6157] synthesizing module 'system_processing_system7_0_axi_periph_0' [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/synth/system.v:4131]
+INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_WKXF3L' [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/synth/system.v:372]
+INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_WKXF3L' (132#1) [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/synth/system.v:372]
+INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_1ORP4PS' [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/synth/system.v:504]
+INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_1ORP4PS' (133#1) [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/synth/system.v:504]
+INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_1VD9O7M' [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/synth/system.v:866]
+INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_1VD9O7M' (134#1) [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/synth/system.v:866]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_IK3G2O' [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/synth/system.v:1692]
+INFO: [Synth 8-6157] synthesizing module 'system_auto_pc_1' [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/ip/system_auto_pc_1/synth/system_auto_pc_1.v:58]
+INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_24_axi_protocol_converter__parameterized1' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/6e0d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:4808]
+INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_24_b2s' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/6e0d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:4226]
+INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_24_b2s_aw_channel' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/6e0d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3971]
+INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_24_b2s_cmd_translator' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/6e0d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3464]
+INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_24_b2s_incr_cmd' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/6e0d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3092]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_24_b2s_incr_cmd' (135#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/6e0d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3092]
+INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_24_b2s_wrap_cmd' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/6e0d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2902]
+INFO: [Common 17-14] Message 'Synth 8-6157' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_24_b2s_wrap_cmd' (136#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/6e0d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2902]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_24_b2s_cmd_translator' (137#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/6e0d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3464]
+INFO: [Synth 8-226] default block is never used [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/6e0d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3277]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_24_b2s_wr_cmd_fsm' (138#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/6e0d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3224]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_24_b2s_aw_channel' (139#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/6e0d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3971]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_24_b2s_simple_fifo' (140#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/6e0d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2816]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_24_b2s_simple_fifo__parameterized0' (140#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/6e0d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2816]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_24_b2s_b_channel' (141#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/6e0d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3606]
+INFO: [Synth 8-226] default block is never used [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/6e0d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3395]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_24_b2s_rd_cmd_fsm' (142#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/6e0d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3334]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_24_b2s_ar_channel' (143#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/6e0d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:4082]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_24_b2s_simple_fifo__parameterized1' (143#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/6e0d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2816]
+INFO: [Common 17-14] Message 'Synth 8-6155' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-7071] port 'aclk2x' of module 'axi_register_slice_v2_1_24_axi_register_slice' is unconnected for instance 'SI_REG' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/6e0d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:4392]
+WARNING: [Synth 8-7023] instance 'SI_REG' of module 'axi_register_slice_v2_1_24_axi_register_slice' has 93 connections declared, but only 92 given [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/6e0d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:4392]
+WARNING: [Synth 8-7071] port 'aclk2x' of module 'axi_register_slice_v2_1_24_axi_register_slice' is unconnected for instance 'MI_REG' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/6e0d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:4647]
+WARNING: [Synth 8-7023] instance 'MI_REG' of module 'axi_register_slice_v2_1_24_axi_register_slice' has 93 connections declared, but only 92 given [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/6e0d/hdl/axi_protocol_converter_v2_1_vl_rfs.v:4647]
+WARNING: [Synth 8-689] width (8) of port connection 'm_axi_wstrb' does not match port width (12) of module 'system_xbar_0' [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/synth/system.v:4790]
+WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'system_xbar_0' is unconnected for instance 'xbar' [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/synth/system.v:4772]
+WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'system_xbar_0' is unconnected for instance 'xbar' [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/synth/system.v:4772]
+WARNING: [Synth 8-7023] instance 'xbar' of module 'system_xbar_0' has 40 connections declared, but only 38 given [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/synth/system.v:4772]
+INFO: [Synth 8-638] synthesizing module 'system_rst_processing_system7_0_100M_0' [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/ip/system_rst_processing_system7_0_100M_0/synth/system_rst_processing_system7_0_100M_0.vhd:74]
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_EXT_RST_WIDTH bound to: 4 - type: integer 
+	Parameter C_AUX_RST_WIDTH bound to: 4 - type: integer 
+	Parameter C_EXT_RESET_HIGH bound to: 1'b0 
+	Parameter C_AUX_RESET_HIGH bound to: 1'b0 
+	Parameter C_NUM_BUS_RST bound to: 1 - type: integer 
+	Parameter C_NUM_PERP_RST bound to: 1 - type: integer 
+	Parameter C_NUM_INTERCONNECT_ARESETN bound to: 1 - type: integer 
+	Parameter C_NUM_PERP_ARESETN bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'proc_sys_reset' declared at '/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1264' bound to instance 'U0' of component 'proc_sys_reset' [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/ip/system_rst_processing_system7_0_100M_0/synth/system_rst_processing_system7_0_100M_0.vhd:129]
+INFO: [Synth 8-638] synthesizing module 'proc_sys_reset' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1323]
+	Parameter INIT bound to: 1'b1 
+INFO: [Synth 8-113] binding component instance 'FDRE_inst' to cell 'FDRE' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1392]
+	Parameter INIT bound to: 1'b1 
+INFO: [Synth 8-113] binding component instance 'FDRE_BSR' to cell 'FDRE' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1408]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'FDRE_BSR_N' to cell 'FDRE' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1434]
+	Parameter INIT bound to: 1'b1 
+INFO: [Synth 8-113] binding component instance 'FDRE_PER' to cell 'FDRE' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1457]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'FDRE_PER_N' to cell 'FDRE' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1481]
+INFO: [Synth 8-638] synthesizing module 'lpf' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:816]
+INFO: [Synth 8-3491] module 'SRL16' declared at '/home/software/Xilinx/Vivado/2021.1/scripts/rt/data/unisim_comp.v:100945' bound to instance 'POR_SRL_I' of component 'SRL16' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:868]
+INFO: [Synth 8-638] synthesizing module 'cdc_sync__parameterized0' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:514]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2' to cell 'FDR' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:545]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3' to cell 'FDR' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:554]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4' to cell 'FDR' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:564]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5' to cell 'FDR' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:574]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6' to cell 'FDR' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:584]
+INFO: [Synth 8-256] done synthesizing module 'cdc_sync__parameterized0' (152#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-256] done synthesizing module 'lpf' (153#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:816]
+INFO: [Synth 8-638] synthesizing module 'sequence_psr' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:301]
+INFO: [Synth 8-638] synthesizing module 'upcnt_n' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:125]
+INFO: [Synth 8-256] done synthesizing module 'upcnt_n' (154#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:125]
+INFO: [Synth 8-256] done synthesizing module 'sequence_psr' (155#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:301]
+INFO: [Synth 8-256] done synthesizing module 'proc_sys_reset' (156#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1323]
+INFO: [Synth 8-256] done synthesizing module 'system_rst_processing_system7_0_100M_0' (157#1) [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/ip/system_rst_processing_system7_0_100M_0/synth/system_rst_processing_system7_0_100M_0.vhd:74]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'system_rst_processing_system7_0_100M_0' is unconnected for instance 'rst_processing_system7_0_100M' [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/synth/system.v:2951]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'system_rst_processing_system7_0_100M_0' is unconnected for instance 'rst_processing_system7_0_100M' [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/synth/system.v:2951]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'system_rst_processing_system7_0_100M_0' is unconnected for instance 'rst_processing_system7_0_100M' [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/synth/system.v:2951]
+WARNING: [Synth 8-7023] instance 'rst_processing_system7_0_100M' of module 'system_rst_processing_system7_0_100M_0' has 10 connections declared, but only 7 given [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/synth/system.v:2951]
+INFO: [Synth 8-638] synthesizing module 'system_rst_processing_system7_0_140M_0' [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/ip/system_rst_processing_system7_0_140M_0/synth/system_rst_processing_system7_0_140M_0.vhd:74]
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_EXT_RST_WIDTH bound to: 4 - type: integer 
+	Parameter C_AUX_RST_WIDTH bound to: 4 - type: integer 
+	Parameter C_EXT_RESET_HIGH bound to: 1'b0 
+	Parameter C_AUX_RESET_HIGH bound to: 1'b0 
+	Parameter C_NUM_BUS_RST bound to: 1 - type: integer 
+	Parameter C_NUM_PERP_RST bound to: 1 - type: integer 
+	Parameter C_NUM_INTERCONNECT_ARESETN bound to: 1 - type: integer 
+	Parameter C_NUM_PERP_ARESETN bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'proc_sys_reset' declared at '/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1264' bound to instance 'U0' of component 'proc_sys_reset' [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/ip/system_rst_processing_system7_0_140M_0/synth/system_rst_processing_system7_0_140M_0.vhd:129]
+INFO: [Synth 8-256] done synthesizing module 'system_rst_processing_system7_0_140M_0' (158#1) [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/ip/system_rst_processing_system7_0_140M_0/synth/system_rst_processing_system7_0_140M_0.vhd:74]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'system_rst_processing_system7_0_140M_0' is unconnected for instance 'rst_processing_system7_0_140M' [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/synth/system.v:2959]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'system_rst_processing_system7_0_140M_0' is unconnected for instance 'rst_processing_system7_0_140M' [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/synth/system.v:2959]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'system_rst_processing_system7_0_140M_0' is unconnected for instance 'rst_processing_system7_0_140M' [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/synth/system.v:2959]
+WARNING: [Synth 8-7023] instance 'rst_processing_system7_0_140M' of module 'system_rst_processing_system7_0_140M_0' has 10 connections declared, but only 7 given [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/synth/system.v:2959]
+INFO: [Synth 8-638] synthesizing module 'system_axi_gpio_0_0' [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/ip/system_axi_gpio_0_0/synth/system_axi_gpio_0_0.vhd:84]
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 9 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_GPIO_WIDTH bound to: 4 - type: integer 
+	Parameter C_GPIO2_WIDTH bound to: 32 - type: integer 
+	Parameter C_ALL_INPUTS bound to: 1 - type: integer 
+	Parameter C_ALL_INPUTS_2 bound to: 0 - type: integer 
+	Parameter C_ALL_OUTPUTS bound to: 0 - type: integer 
+	Parameter C_ALL_OUTPUTS_2 bound to: 0 - type: integer 
+	Parameter C_INTERRUPT_PRESENT bound to: 0 - type: integer 
+	Parameter C_DOUT_DEFAULT bound to: 32'b00000000000000000000000000000000 
+	Parameter C_TRI_DEFAULT bound to: 32'b11111111111111111111111111111111 
+	Parameter C_IS_DUAL bound to: 0 - type: integer 
+	Parameter C_DOUT_DEFAULT_2 bound to: 32'b00000000000000000000000000000000 
+	Parameter C_TRI_DEFAULT_2 bound to: 32'b11111111111111111111111111111111 
+INFO: [Synth 8-3491] module 'axi_gpio' declared at '/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/65b4/hdl/axi_gpio_v2_0_vh_rfs.vhd:1265' bound to instance 'U0' of component 'axi_gpio' [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/ip/system_axi_gpio_0_0/synth/system_axi_gpio_0_0.vhd:168]
+INFO: [Synth 8-638] synthesizing module 'axi_gpio__parameterized1' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/65b4/hdl/axi_gpio_v2_0_vh_rfs.vhd:1351]
+INFO: [Synth 8-638] synthesizing module 'GPIO_Core__parameterized0' [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/65b4/hdl/axi_gpio_v2_0_vh_rfs.vhd:178]
+INFO: [Synth 8-226] default block is never used [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/65b4/hdl/axi_gpio_v2_0_vh_rfs.vhd:443]
+INFO: [Synth 8-256] done synthesizing module 'GPIO_Core__parameterized0' (158#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/65b4/hdl/axi_gpio_v2_0_vh_rfs.vhd:178]
+INFO: [Synth 8-256] done synthesizing module 'axi_gpio__parameterized1' (158#1) [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/65b4/hdl/axi_gpio_v2_0_vh_rfs.vhd:1351]
+INFO: [Synth 8-256] done synthesizing module 'system_axi_gpio_0_0' (159#1) [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/ip/system_axi_gpio_0_0/synth/system_axi_gpio_0_0.vhd:84]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2499.094 ; gain = 1.867 ; free physical = 1572 ; free virtual = 20408
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2499.094 ; gain = 1.867 ; free physical = 1593 ; free virtual = 20430
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2499.094 ; gain = 1.867 ; free physical = 1593 ; free virtual = 20430
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.25 ; elapsed = 00:00:00.25 . Memory (MB): peak = 2499.094 ; gain = 0.000 ; free physical = 1559 ; free virtual = 20396
+INFO: [Netlist 29-17] Analyzing 109 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/ip/system_axi_gpio_0_0/system_axi_gpio_0_0_board.xdc] for cell 'system_i/switches/U0'
+Finished Parsing XDC File [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/ip/system_axi_gpio_0_0/system_axi_gpio_0_0_board.xdc] for cell 'system_i/switches/U0'
+Parsing XDC File [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/ip/system_axi_gpio_0_0/system_axi_gpio_0_0.xdc] for cell 'system_i/switches/U0'
+Finished Parsing XDC File [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/ip/system_axi_gpio_0_0/system_axi_gpio_0_0.xdc] for cell 'system_i/switches/U0'
+Parsing XDC File [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/ip/system_axi_gpio_0_1/system_axi_gpio_0_1_board.xdc] for cell 'system_i/leds/U0'
+Finished Parsing XDC File [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/ip/system_axi_gpio_0_1/system_axi_gpio_0_1_board.xdc] for cell 'system_i/leds/U0'
+Parsing XDC File [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/ip/system_axi_gpio_0_1/system_axi_gpio_0_1.xdc] for cell 'system_i/leds/U0'
+Finished Parsing XDC File [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/ip/system_axi_gpio_0_1/system_axi_gpio_0_1.xdc] for cell 'system_i/leds/U0'
+Parsing XDC File [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/system_processing_system7_0_0.xdc] for cell 'system_i/processing_system7_0/inst'
+Finished Parsing XDC File [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/system_processing_system7_0_0.xdc] for cell 'system_i/processing_system7_0/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/system_processing_system7_0_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/system_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/system_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/ip/system_rst_processing_system7_0_100M_0/system_rst_processing_system7_0_100M_0_board.xdc] for cell 'system_i/rst_processing_system7_0_100M/U0'
+Finished Parsing XDC File [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/ip/system_rst_processing_system7_0_100M_0/system_rst_processing_system7_0_100M_0_board.xdc] for cell 'system_i/rst_processing_system7_0_100M/U0'
+Parsing XDC File [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/ip/system_rst_processing_system7_0_100M_0/system_rst_processing_system7_0_100M_0.xdc] for cell 'system_i/rst_processing_system7_0_100M/U0'
+Finished Parsing XDC File [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/ip/system_rst_processing_system7_0_100M_0/system_rst_processing_system7_0_100M_0.xdc] for cell 'system_i/rst_processing_system7_0_100M/U0'
+Parsing XDC File [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/ip/system_rst_processing_system7_0_140M_0/system_rst_processing_system7_0_140M_0_board.xdc] for cell 'system_i/rst_processing_system7_0_140M/U0'
+Finished Parsing XDC File [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/ip/system_rst_processing_system7_0_140M_0/system_rst_processing_system7_0_140M_0_board.xdc] for cell 'system_i/rst_processing_system7_0_140M/U0'
+Parsing XDC File [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/ip/system_rst_processing_system7_0_140M_0/system_rst_processing_system7_0_140M_0.xdc] for cell 'system_i/rst_processing_system7_0_140M/U0'
+Finished Parsing XDC File [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/ip/system_rst_processing_system7_0_140M_0/system_rst_processing_system7_0_140M_0.xdc] for cell 'system_i/rst_processing_system7_0_140M/U0'
+Parsing XDC File [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/ip/system_axi_cdma_0_0/system_axi_cdma_0_0.xdc] for cell 'system_i/axi_cdma_0/U0'
+Finished Parsing XDC File [/home/user/Desktop/Lab 6/lab3.srcs/sources_1/bd/system/ip/system_axi_cdma_0_0/system_axi_cdma_0_0.xdc] for cell 'system_i/axi_cdma_0/U0'
+Parsing XDC File [/home/user/Desktop/Lab 6/lab3.srcs/constrs_1/imports/lab1/lab1_zybo.xdc]
+Finished Parsing XDC File [/home/user/Desktop/Lab 6/lab3.srcs/constrs_1/imports/lab1/lab1_zybo.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/user/Desktop/Lab 6/lab3.srcs/constrs_1/imports/lab1/lab1_zybo.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/system_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/system_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [/home/user/Desktop/Lab 6/lab3.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/user/Desktop/Lab 6/lab3.runs/synth_1/dont_touch.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/user/Desktop/Lab 6/lab3.runs/synth_1/dont_touch.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/system_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/system_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-1714] 3 XPM XDC files have been applied to the design.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2620.906 ; gain = 0.000 ; free physical = 1431 ; free virtual = 20269
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 85 instances were transformed.
+  FDR => FDRE: 74 instances
+  IOBUF => IOBUF (IBUF, OBUFT): 1 instance 
+  MUXCY_L => MUXCY: 8 instances
+  SRL16 => SRL16E: 2 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.08 . Memory (MB): peak = 2620.906 ; gain = 0.000 ; free physical = 1430 ; free virtual = 20269
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 2620.906 ; gain = 123.680 ; free physical = 1549 ; free virtual = 20391
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 2620.906 ; gain = 123.680 ; free physical = 1549 ; free virtual = 20391
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for system_i/processing_system7_0/inst. (constraint file  {/home/user/Desktop/Lab 6/lab3.runs/synth_1/dont_touch.xdc}, line 64).
+Applied set_property KEEP_HIERARCHY = SOFT for system_i/switches/U0. (constraint file  {/home/user/Desktop/Lab 6/lab3.runs/synth_1/dont_touch.xdc}, line 67).
+Applied set_property KEEP_HIERARCHY = SOFT for system_i/rst_processing_system7_0_100M/U0. (constraint file  {/home/user/Desktop/Lab 6/lab3.runs/synth_1/dont_touch.xdc}, line 75).
+Applied set_property KEEP_HIERARCHY = SOFT for system_i/leds/U0. (constraint file  {/home/user/Desktop/Lab 6/lab3.runs/synth_1/dont_touch.xdc}, line 83).
+Applied set_property KEEP_HIERARCHY = SOFT for system_i/rst_processing_system7_0_140M/U0. (constraint file  {/home/user/Desktop/Lab 6/lab3.runs/synth_1/dont_touch.xdc}, line 93).
+Applied set_property KEEP_HIERARCHY = SOFT for system_i/axi_cdma_0/U0. (constraint file  {/home/user/Desktop/Lab 6/lab3.runs/synth_1/dont_touch.xdc}, line 103).
+Applied set_property KEEP_HIERARCHY = SOFT for system_i/axi_mem_intercon/s00_couplers/auto_us/inst. (constraint file  {/home/user/Desktop/Lab 6/lab3.runs/synth_1/dont_touch.xdc}, line 108).
+Applied set_property KEEP_HIERARCHY = SOFT for system_i. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for system_i/axi_bram_ctrl_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for system_i/axi_bram_ctrl_0_bram. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for system_i/switches. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for system_i/leds. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for system_i/axi_mem_intercon/s00_couplers/auto_pc. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for system_i/axi_mem_intercon/s00_couplers/auto_us. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for system_i/axi_mem_intercon. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for system_i/processing_system7_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for system_i/processing_system7_0_axi_periph/xbar. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for system_i/processing_system7_0_axi_periph/s00_couplers/auto_pc. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for system_i/processing_system7_0_axi_periph. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for system_i/rst_processing_system7_0_100M. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for system_i/rst_processing_system7_0_140M. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for system_i/axi_cdma_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for system_i/axi_mem_intercon_1/xbar. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for system_i/axi_mem_intercon_1/m00_couplers/auto_pc. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for system_i/axi_mem_intercon_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for system_i/axi_bram_ctrl_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for system_i/axi_mem_intercon_1/m00_couplers/auto_pc/inst/\gen_axi4_axi3.axi3_conv_inst /\USE_WRITE.write_addr_inst /\USE_BURSTS.cmd_queue /inst/fifo_gen_inst/inst_fifo_gen/\gconvfifo.rf /\grf.rf /rstblk/\ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for system_i/axi_mem_intercon_1/m00_couplers/auto_pc/inst/\gen_axi4_axi3.axi3_conv_inst /\USE_WRITE.write_addr_inst /\USE_B_CHANNEL.cmd_b_queue /inst/fifo_gen_inst/inst_fifo_gen/\gconvfifo.rf /\grf.rf /rstblk/\ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for system_i/axi_mem_intercon_1/m00_couplers/auto_pc/inst/\gen_axi4_axi3.axi3_conv_inst /\USE_READ.USE_SPLIT_R.read_addr_inst /\USE_R_CHANNEL.cmd_queue /inst/fifo_gen_inst/inst_fifo_gen/\gconvfifo.rf /\grf.rf /rstblk/\ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP = true for system_i/leds/U0/gpio_core_1/GPIO_IO_O[3]. (constraint file  auto generated constraint).
+Applied set_property KEEP = true for sws_4bits_tri_i[0]. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 2620.906 ; gain = 123.680 ; free physical = 1488 ; free virtual = 20331
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'arb_sm_cs_reg' in module 'sng_port_arb'
+INFO: [Synth 8-802] inferred FSM for state register 'GEN_WDATA_SM_NO_ECC_SNG_REG_WREADY.wr_data_sng_sm_cs_reg' in module 'wr_chnl'
+INFO: [Synth 8-802] inferred FSM for state register 'GEN_NO_RD_CMD_OPT.rd_data_sm_cs_reg' in module 'rd_chnl'
+INFO: [Synth 8-802] inferred FSM for state register 'GEN_NO_RD_CMD_OPT.rlast_sm_cs_reg' in module 'rd_chnl'
+INFO: [Synth 8-802] inferred FSM for state register 'sig_sm_state_reg' in module 'axi_cdma_simple_cntlr'
+INFO: [Synth 8-802] inferred FSM for state register 'sig_pcc_sm_state_reg' in module 'axi_datamover_pcc'
+INFO: [Synth 8-802] inferred FSM for state register 'sig_pcc_sm_state_reg' in module 'axi_datamover_pcc__parameterized0'
+INFO: [Synth 8-802] inferred FSM for state register 'gpregsm1.curr_fwft_state_reg' in module 'rd_fwft'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'axi_data_fifo_v2_1_23_axic_reg_srl_fifo'
+INFO: [Synth 8-802] inferred FSM for state register 'gen_axi.write_cs_reg' in module 'axi_crossbar_v2_1_25_decerr_slave'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'slave_attachment'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'axi_protocol_converter_v2_1_24_b2s_wr_cmd_fsm'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'axi_protocol_converter_v2_1_24_b2s_rd_cmd_fsm'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                               00 |                               00
+                 wr_data |                               01 |                               10
+                 rd_data |                               10 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'arb_sm_cs_reg' using encoding 'sequential' in module 'sng_port_arb'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                              001 |                               00
+            brst_wr_data |                              010 |                               10
+             sng_wr_data |                              100 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'GEN_WDATA_SM_NO_ECC_SNG_REG_WREADY.wr_data_sng_sm_cs_reg' using encoding 'one-hot' in module 'wr_chnl'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                             0000 |                             0000
+                sng_addr |                             0001 |                             0011
+                sec_addr |                             0010 |                             0100
+               full_pipe |                             0011 |                             0101
+           full_throttle |                             0100 |                             0110
+               last_addr |                             0101 |                             0111
+           last_throttle |                             0110 |                             1000
+               last_data |                             0111 |                             1001
+       last_data_ar_pend |                             1000 |                             1010
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'GEN_NO_RD_CMD_OPT.rd_data_sm_cs_reg' using encoding 'sequential' in module 'rd_chnl'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                              000 |                              000
+          w8_throttle_b2 |                              001 |                              101
+             w8_throttle |                              010 |                              010
+        w8_2nd_last_data |                              011 |                              011
+            w8_last_data |                              100 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'GEN_NO_RD_CMD_OPT.rlast_sm_cs_reg' using encoding 'sequential' in module 'rd_chnl'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    init |                         00000001 |                              000
+             wait_for_go |                         00000010 |                              001
+               ld_dm_cmd |                         00000100 |                              010
+         get_mm2s_status |                         00001000 |                              011
+         get_s2mm_status |                         00010000 |                              100
+            score_status |                         00100000 |                              101
+               xfer_done |                         01000000 |                              110
+              error_trap |                         10000000 |                              111
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'sig_sm_state_reg' using encoding 'one-hot' in module 'axi_cdma_simple_cntlr'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    init |                         00000001 |                              000
+            wait_for_cmd |                         00000010 |                              001
+                  calc_1 |                         00000100 |                              010
+                  calc_2 |                         00001000 |                              011
+                  calc_3 |                         00010000 |                              100
+       wait_on_xfer_push |                         00100000 |                              101
+             chk_if_done |                         01000000 |                              110
+              error_trap |                         10000000 |                              111
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'sig_pcc_sm_state_reg' using encoding 'one-hot' in module 'axi_datamover_pcc'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    init |                         00000001 |                              000
+            wait_for_cmd |                         00000010 |                              001
+                  calc_1 |                         00000100 |                              010
+                  calc_2 |                         00001000 |                              011
+                  calc_3 |                         00010000 |                              100
+       wait_on_xfer_push |                         00100000 |                              101
+             chk_if_done |                         01000000 |                              110
+              error_trap |                         10000000 |                              111
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'sig_pcc_sm_state_reg' using encoding 'one-hot' in module 'axi_datamover_pcc__parameterized0'
+INFO: [Synth 8-6159] Found Keep on FSM register 'gpregsm1.curr_fwft_state_reg' in module 'rd_fwft', re-encoding will not be performed
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 invalid |                               00 |                               00
+            stage1_valid |                               10 |                               10
+       both_stages_valid |                               11 |                               11
+            stage2_valid |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    ZERO |                             1000 |                               10
+                     ONE |                             0010 |                               11
+                     TWO |                             0001 |                               01
+                  iSTATE |                             0100 |                               00
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'axi_data_fifo_v2_1_23_axic_reg_srl_fifo'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+            P_WRITE_IDLE |                              001 |                               00
+            P_WRITE_DATA |                              010 |                               01
+            P_WRITE_RESP |                              100 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'gen_axi.write_cs_reg' using encoding 'one-hot' in module 'axi_crossbar_v2_1_25_decerr_slave'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE2 |                             0001 |                               00
+                  iSTATE |                             0010 |                               01
+                 iSTATE0 |                             0100 |                               10
+                 iSTATE1 |                             1000 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'slave_attachment'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 SM_IDLE |                               01 |                               00
+               SM_CMD_EN |                               11 |                               01
+         SM_CMD_ACCEPTED |                               10 |                               10
+            SM_DONE_WAIT |                               00 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'axi_protocol_converter_v2_1_24_b2s_wr_cmd_fsm'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 SM_IDLE |                               01 |                               00
+               SM_CMD_EN |                               11 |                               01
+         SM_CMD_ACCEPTED |                               10 |                               10
+                 SM_DONE |                               00 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'axi_protocol_converter_v2_1_24_b2s_rd_cmd_fsm'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 2620.906 ; gain = 123.680 ; free physical = 1190 ; free virtual = 20036
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 2     
+	   2 Input   16 Bit       Adders := 4     
+	   2 Input   12 Bit       Adders := 8     
+	   2 Input    9 Bit       Adders := 4     
+	   2 Input    8 Bit       Adders := 13    
+	   2 Input    7 Bit       Adders := 2     
+	   2 Input    6 Bit       Adders := 8     
+	   2 Input    5 Bit       Adders := 16    
+	   3 Input    4 Bit       Adders := 4     
+	   2 Input    4 Bit       Adders := 17    
+	   2 Input    3 Bit       Adders := 13    
+	   3 Input    3 Bit       Adders := 4     
+	   2 Input    2 Bit       Adders := 12    
+	   2 Input    1 Bit       Adders := 2     
++---XORs : 
+	   2 Input      1 Bit         XORs := 74    
++---Registers : 
+	               73 Bit    Registers := 4     
+	               71 Bit    Registers := 2     
+	               68 Bit    Registers := 8     
+	               66 Bit    Registers := 4     
+	               64 Bit    Registers := 8     
+	               62 Bit    Registers := 2     
+	               47 Bit    Registers := 4     
+	               37 Bit    Registers := 2     
+	               36 Bit    Registers := 2     
+	               32 Bit    Registers := 19    
+	               30 Bit    Registers := 2     
+	               26 Bit    Registers := 2     
+	               16 Bit    Registers := 14    
+	               14 Bit    Registers := 3     
+	               13 Bit    Registers := 2     
+	               12 Bit    Registers := 17    
+	                9 Bit    Registers := 4     
+	                8 Bit    Registers := 49    
+	                6 Bit    Registers := 10    
+	                5 Bit    Registers := 24    
+	                4 Bit    Registers := 50    
+	                3 Bit    Registers := 44    
+	                2 Bit    Registers := 61    
+	                1 Bit    Registers := 855   
++---Muxes : 
+	   2 Input   73 Bit        Muxes := 2     
+	   2 Input   68 Bit        Muxes := 8     
+	   2 Input   66 Bit        Muxes := 4     
+	   2 Input   64 Bit        Muxes := 6     
+	   2 Input   47 Bit        Muxes := 4     
+	   2 Input   37 Bit        Muxes := 2     
+	   2 Input   36 Bit        Muxes := 2     
+	   2 Input   32 Bit        Muxes := 28    
+	   8 Input   32 Bit        Muxes := 2     
+	   5 Input   32 Bit        Muxes := 2     
+	   2 Input   24 Bit        Muxes := 6     
+	   2 Input   16 Bit        Muxes := 11    
+	   3 Input   16 Bit        Muxes := 2     
+	   2 Input   14 Bit        Muxes := 2     
+	   5 Input   13 Bit        Muxes := 4     
+	   2 Input   13 Bit        Muxes := 10    
+	   8 Input   12 Bit        Muxes := 2     
+	   2 Input   12 Bit        Muxes := 6     
+	   2 Input    9 Bit        Muxes := 8     
+	   2 Input    8 Bit        Muxes := 65    
+	   8 Input    8 Bit        Muxes := 15    
+	   2 Input    7 Bit        Muxes := 1     
+	   2 Input    6 Bit        Muxes := 2     
+	   2 Input    5 Bit        Muxes := 4     
+	   9 Input    4 Bit        Muxes := 2     
+	   2 Input    4 Bit        Muxes := 61    
+	   3 Input    4 Bit        Muxes := 3     
+	   4 Input    4 Bit        Muxes := 2     
+	   4 Input    3 Bit        Muxes := 4     
+	   5 Input    3 Bit        Muxes := 6     
+	   2 Input    3 Bit        Muxes := 30    
+	   3 Input    3 Bit        Muxes := 2     
+	   8 Input    3 Bit        Muxes := 6     
+	   3 Input    2 Bit        Muxes := 8     
+	   2 Input    2 Bit        Muxes := 104   
+	   4 Input    2 Bit        Muxes := 11    
+	   5 Input    2 Bit        Muxes := 3     
+	   7 Input    2 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 445   
+	   3 Input    1 Bit        Muxes := 44    
+	   9 Input    1 Bit        Muxes := 38    
+	   5 Input    1 Bit        Muxes := 4     
+	   8 Input    1 Bit        Muxes := 10    
+	   4 Input    1 Bit        Muxes := 15    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:51 ; elapsed = 00:00:55 . Memory (MB): peak = 2620.906 ; gain = 123.680 ; free physical = 730 ; free virtual = 19581
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping Report (see note below)
++---------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------+----------------+----------------------+-------------+
+|Module Name                                                                                                                                              | RTL Object                                                                    | Inference      | Size (Depth x Width) | Primitives  | 
++---------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------+----------------+----------------------+-------------+
+|system_i/axi_mem_intercon_1/\m00_couplers/auto_pc /\inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst  | inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg | User Attribute | 32 x 5               | RAM32M x 1  | 
++---------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------+----------------+----------------------+-------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:57 ; elapsed = 00:01:01 . Memory (MB): peak = 2620.906 ; gain = 123.680 ; free physical = 570 ; free virtual = 19424
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:59 ; elapsed = 00:01:03 . Memory (MB): peak = 2620.906 ; gain = 123.680 ; free physical = 532 ; free virtual = 19381
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping Report
++---------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------+----------------+----------------------+-------------+
+|Module Name                                                                                                                                              | RTL Object                                                                    | Inference      | Size (Depth x Width) | Primitives  | 
++---------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------+----------------+----------------------+-------------+
+|system_i/axi_mem_intercon_1/\m00_couplers/auto_pc /\inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst  | inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg | User Attribute | 32 x 5               | RAM32M x 1  | 
++---------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------+----------------+----------------------+-------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:02 ; elapsed = 00:01:07 . Memory (MB): peak = 2629.938 ; gain = 132.711 ; free physical = 538 ; free virtual = 19393
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/3d13/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:5162]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/3d13/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:5162]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/3d13/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:5162]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/3d13/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:5162]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/3d13/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:5162]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/3d13/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:5162]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/3d13/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:5162]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/3d13/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:5162]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/3d13/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:6271]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/3d13/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:6271]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/3d13/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:6271]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/3d13/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:6271]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/3d13/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:6271]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/3d13/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:6271]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/3d13/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:6271]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/3d13/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:6271]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1756]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1756]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1756]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1756]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1756]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1756]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1756]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1756]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1756]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1756]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1756]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1756]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1756]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1756]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1756]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1756]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1756]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1756]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1756]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1756]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1756]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1756]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1756]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1756]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1756]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1756]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1756]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1756]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1756]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1756]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1756]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1756]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1756]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1756]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1756]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1756]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1756]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1756]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1756]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1756]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1756]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1756]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1756]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1756]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1756]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1756]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1756]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1756]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1756]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1756]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1756]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1756]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1756]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1756]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1756]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1756]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1756]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1756]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1756]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1756]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1756]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1756]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1756]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1756]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v:1756]
+WARNING: [Synth 8-5396] Clock pin CLK has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
+WARNING: [Synth 8-5396] Clock pin CLK has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
+WARNING: [Synth 8-5396] Clock pin CLK has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
+WARNING: [Synth 8-5396] Clock pin CLK has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
+WARNING: [Synth 8-5396] Clock pin CLK has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
+WARNING: [Synth 8-5396] Clock pin CLK has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
+WARNING: [Synth 8-5396] Clock pin CLK has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
+WARNING: [Synth 8-5396] Clock pin CLK has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
+WARNING: [Synth 8-5396] Clock pin CLK has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
+WARNING: [Synth 8-5396] Clock pin CLK has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
+WARNING: [Synth 8-5396] Clock pin CLK has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
+WARNING: [Synth 8-5396] Clock pin CLK has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
+WARNING: [Synth 8-5396] Clock pin CLK has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
+WARNING: [Synth 8-5396] Clock pin CLK has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
+WARNING: [Synth 8-5396] Clock pin CLK has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
+WARNING: [Synth 8-5396] Clock pin CLK has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
+WARNING: [Synth 8-5396] Clock pin CLK has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
+WARNING: [Synth 8-5396] Clock pin CLK has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
+WARNING: [Synth 8-5396] Clock pin CLK has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/user/Desktop/Lab 6/lab3.gen/sources_1/bd/system/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
+INFO: [Common 17-14] Message 'Synth 8-5396' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:05 ; elapsed = 00:01:09 . Memory (MB): peak = 2629.938 ; gain = 132.711 ; free physical = 596 ; free virtual = 19445
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:05 ; elapsed = 00:01:09 . Memory (MB): peak = 2629.938 ; gain = 132.711 ; free physical = 596 ; free virtual = 19445
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:05 ; elapsed = 00:01:10 . Memory (MB): peak = 2629.938 ; gain = 132.711 ; free physical = 597 ; free virtual = 19446
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:05 ; elapsed = 00:01:10 . Memory (MB): peak = 2629.938 ; gain = 132.711 ; free physical = 597 ; free virtual = 19446
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:06 ; elapsed = 00:01:10 . Memory (MB): peak = 2629.938 ; gain = 132.711 ; free physical = 597 ; free virtual = 19446
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:06 ; elapsed = 00:01:10 . Memory (MB): peak = 2629.938 ; gain = 132.711 ; free physical = 597 ; free virtual = 19446
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Dynamic Shift Register Report:
++------------+-------------------------------+--------+------------+--------+---------+--------+--------+--------+
+|Module Name | RTL Name                      | Length | Data Width | SRL16E | SRLC32E | Mux F7 | Mux F8 | Mux F9 | 
++------------+-------------------------------+--------+------------+--------+---------+--------+--------+--------+
+|dsrl        | INFERRED_GEN.data_reg[3]      | 59     | 59         | 59     | 0       | 0      | 0      | 0      | 
+|dsrl__1     | INFERRED_GEN.data_reg[3]      | 38     | 38         | 38     | 0       | 0      | 0      | 0      | 
+|dsrl__2     | INFERRED_GEN.data_reg[5]      | 2      | 2          | 2      | 0       | 0      | 0      | 0      | 
+|dsrl__3     | INFERRED_GEN.data_reg[5]      | 7      | 7          | 7      | 0       | 0      | 0      | 0      | 
+|dsrl__4     | INFERRED_GEN.data_reg[3]      | 36     | 36         | 36     | 0       | 0      | 0      | 0      | 
+|dsrl__5     | USE_RTL_FIFO.data_srl_reg[31] | 12     | 12         | 0      | 12      | 0      | 0      | 0      | 
+|dsrl__6     | USE_RTL_FIFO.data_srl_reg[31] | 30     | 30         | 0      | 30      | 0      | 0      | 0      | 
+|dsrl__7     | memory_reg[3]                 | 20     | 20         | 20     | 0       | 0      | 0      | 0      | 
+|dsrl__8     | memory_reg[3]                 | 2      | 2          | 2      | 0       | 0      | 0      | 0      | 
+|dsrl__9     | memory_reg[31]                | 34     | 34         | 0      | 34      | 0      | 0      | 0      | 
+|dsrl__10    | memory_reg[31]                | 13     | 13         | 0      | 13      | 0      | 0      | 0      | 
++------------+-------------------------------+--------+------------+--------+---------+--------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |BIBUF    |   130|
+|2     |BUFG     |     2|
+|3     |CARRY4   |    50|
+|4     |LUT1     |   114|
+|5     |LUT2     |   265|
+|6     |LUT3     |   907|
+|7     |LUT4     |   491|
+|8     |LUT5     |   487|
+|9     |LUT6     |   885|
+|10    |MUXF7    |    11|
+|11    |PS7      |     1|
+|12    |RAM32M   |     1|
+|13    |RAMB36E1 |    16|
+|14    |SRL16    |     2|
+|15    |SRL16E   |   147|
+|16    |SRLC32E  |   121|
+|17    |FDCE     |    69|
+|18    |FDPE     |    33|
+|19    |FDR      |    24|
+|20    |FDRE     |  3502|
+|21    |FDSE     |    78|
+|22    |IBUF     |     4|
+|23    |IOBUF    |     1|
+|24    |OBUF     |     4|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:06 ; elapsed = 00:01:10 . Memory (MB): peak = 2629.938 ; gain = 132.711 ; free physical = 597 ; free virtual = 19446
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 635 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:01 ; elapsed = 00:01:06 . Memory (MB): peak = 2629.938 ; gain = 10.898 ; free physical = 654 ; free virtual = 19503
+Synthesis Optimization Complete : Time (s): cpu = 00:01:06 ; elapsed = 00:01:10 . Memory (MB): peak = 2629.945 ; gain = 132.711 ; free physical = 654 ; free virtual = 19503
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.12 ; elapsed = 00:00:00.12 . Memory (MB): peak = 2635.875 ; gain = 0.000 ; free physical = 747 ; free virtual = 19597
+INFO: [Netlist 29-17] Analyzing 105 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2677.797 ; gain = 0.000 ; free physical = 817 ; free virtual = 19668
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 28 instances were transformed.
+  FDR => FDRE: 24 instances
+  IOBUF => IOBUF (IBUF, OBUFT): 1 instance 
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 1 instance 
+  SRL16 => SRL16E: 2 instances
+
+Synth Design complete, checksum: 46eecaf4
+INFO: [Common 17-83] Releasing license: Synthesis
+492 Infos, 160 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:15 ; elapsed = 00:01:15 . Memory (MB): peak = 2677.797 ; gain = 180.703 ; free physical = 1125 ; free virtual = 19976
+INFO: [Common 17-1381] The checkpoint '/home/user/Desktop/Lab 6/lab3.runs/synth_1/system_wrapper.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file system_wrapper_utilization_synth.rpt -pb system_wrapper_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Oct 21 19:35:59 2026...
